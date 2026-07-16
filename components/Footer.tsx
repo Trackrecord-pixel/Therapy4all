@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
 import { primaryNav, servicePagesNav, locations, site } from "@/lib/site";
+import { suburbs } from "@/lib/suburbs";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -42,7 +43,13 @@ export default function Footer() {
             <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-accent mt-6">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
           </div>
         </div>
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-ink-800 pt-8 text-xs text-ink-400 sm:flex-row sm:items-center">
+        <div className="mt-12 border-t border-ink-800 pt-8">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-ink-400">Areas we serve</h2>
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs text-ink-400">
+            {suburbs.map((s) => <Link key={s.slug} href={`/${s.slug}`} className="hover:text-white">Physiotherapy {s.name}</Link>)}
+          </div>
+        </div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-ink-800 pt-8 text-xs text-ink-400 sm:flex-row sm:items-center">
           <p>&copy; {year} {site.legalName}. All rights reserved.</p>
           <p className="max-w-xl">This website provides general information only and is not a substitute for individual physiotherapy or medical advice.</p>
         </div>

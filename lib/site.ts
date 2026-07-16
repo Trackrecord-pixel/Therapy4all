@@ -27,17 +27,6 @@ export const primaryNav: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const servicePagesNav: NavLink[] = [
-  { label: "Bulk Billing Physiotherapy", href: "/bulk-billing-physiotherapy-newcastle" },
-  { label: "Sports Physiotherapy", href: "/sports-physiotherapy-newcastle" },
-  { label: "Women's Health Physiotherapy", href: "/womens-health-physiotherapy-newcastle" },
-  { label: "Chronic Pain Physiotherapy", href: "/chronic-pain-physiotherapy-newcastle" },
-  { label: "Post-Operative Rehabilitation", href: "/post-operative-rehabilitation-newcastle" },
-  { label: "Musculoskeletal Physiotherapy", href: "/musculoskeletal-physiotherapy-newcastle" },
-  { label: "Workplace Physiotherapy", href: "/workplace-physiotherapy-newcastle" },
-  { label: "Aged Care Physiotherapy", href: "/aged-care-physiotherapy-newcastle" },
-];
-
 export type Service = {
   slug: string;
   title: string;

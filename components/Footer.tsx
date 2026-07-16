@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Icon from "./Icon";
-import { primaryNav, services, locations, site } from "@/lib/site";
+import { primaryNav, servicePagesNav, locations, site } from "@/lib/site";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <h2 className="text-sm font-semibold uppercase tracking-widest text-white">Services</h2>
             <ul className="mt-5 space-y-3 text-sm">
-              {services.slice(0, 6).map((s) => <li key={s.slug}><Link href="/services" className="text-ink-300 hover:text-white">{s.title}</Link></li>)}
+              {servicePagesNav.slice(0, 6).map((l) => <li key={l.href}><Link href={l.href} className="text-ink-300 hover:text-white">{l.label}</Link></li>)}
             </ul>
           </div>
           <div className="lg:col-span-3">

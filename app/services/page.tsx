@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Icon from "@/components/Icon";
 import type { IconName } from "@/components/Icon";
 import CTASection from "@/components/CTASection";
 import Reveal from "@/components/Reveal";
 import { BreadcrumbSchema } from "@/components/StructuredData";
-import { services, site } from "@/lib/site";
+import { services, servicePagesNav, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Physiotherapy Services",
@@ -68,6 +69,22 @@ export default function ServicesPage() {
           <p className="mt-8 text-center text-ink-600">Not sure what you need? Call <a href={site.phoneHref} className="font-semibold text-brand-700 underline">{site.phone}</a> and our team will help.</p>
         </div>
       </section>
+      {/* In-depth service guides */}
+      <section className="section-py bg-white">
+        <div className="container-px">
+          <h2 className="text-center text-3xl text-ink-900 sm:text-4xl">Explore our services in depth</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-ink-600">Detailed guides on each of our key services across Newcastle, Lake Macquarie and Maitland.</p>
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
+            {servicePagesNav.map((sp) => (
+              <Link key={sp.href} href={sp.href} className="card card-hover flex items-center gap-4">
+                <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon name="pulse" className="h-5 w-5" /></span>
+                <span className="font-semibold text-ink-900">{sp.label} Newcastle</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CTASection />
       <BreadcrumbSchema items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]} />
     </>

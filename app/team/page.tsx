@@ -44,6 +44,11 @@ export default function TeamPage() {
               </article>
             </Reveal>
           ))}
+          <div className="rounded-3xl border-2 border-dashed border-brand-200 bg-brand-50 p-10 text-center">
+            <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-100 text-brand-700"><Icon name="users" className="h-8 w-8" /></span>
+            <h2 className="mt-5 text-2xl text-ink-900">A new physiotherapist is joining us soon</h2>
+            <p className="mx-auto mt-3 max-w-lg text-ink-600">We're growing our team to help even more patients move better and feel stronger. Watch this space.</p>
+          </div>
         </div>
       </section>
       <CTASection title="Book with our team" />

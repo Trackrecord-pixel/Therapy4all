@@ -10,7 +10,7 @@ import { services, servicePagesNav, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Physiotherapy Services",
-  description: "Physiotherapy services at Therapy 4 All: bulk-billed GP Care Plans, musculoskeletal and sports injuries, chronic pain, post-operative rehab, women's health, clinical Pilates, workplace and aged care physiotherapy.",
+  description: "Physiotherapy services at Therapy 4 All: bulk-billed GP Care Plans, musculoskeletal and sports injuries, chronic pain, post-operative rehab, women's health, workplace and aged care physiotherapy.",
   alternates: { canonical: "/services" },
 };
 

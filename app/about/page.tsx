@@ -7,7 +7,7 @@ import type { IconName } from "@/components/Icon";
 import CTASection from "@/components/CTASection";
 import Reveal from "@/components/Reveal";
 import { BreadcrumbSchema } from "@/components/StructuredData";
-import { whyChoose } from "@/lib/site";
+import { whyChoose, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -42,7 +42,7 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/book-online" className="btn-primary mt-7 w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+              <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
             </div>
           </div>
         </div>

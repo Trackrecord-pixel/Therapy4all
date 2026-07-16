@@ -72,14 +72,14 @@ export const servicePages: Record<string, LandingContent> = {
     ],
     sections: [
       { h2: "How women's health physiotherapy helps", body: ["Women's health physiotherapy supports you through many stages of life with practical, personalised care."],
-        list: ["Pregnancy and postnatal recovery","Pelvic health and core strength","Clinical Pilates for strength and control","Post-operative rehabilitation","Musculoskeletal pain and posture","Building confidence and long-term wellbeing"] },
+        list: ["Pregnancy and postnatal recovery","Pelvic health and core strength","Strength and core rehabilitation","Post-operative rehabilitation","Musculoskeletal pain and posture","Building confidence and long-term wellbeing"] },
       { h2: "A comfortable, supportive approach", body: ["We know that seeking help for women's health concerns takes trust. Prakriti creates a welcoming, respectful environment and takes the time to understand your goals, so your care always feels comfortable and individualised.", "Every program is evidence-based and tailored to your body and your life — practical, goal-oriented and sustainable."] },
-      { h2: "Clinical Pilates for women", body: ["Clinical Pilates is a wonderful tool in women's health, building deep core strength, stability and control. Delivered under physiotherapy guidance — including in our fully equipped Mount Hutton gym — it's tailored to your needs and progressed safely over time."] },
+      { h2: "Strength and core rehabilitation", body: ["Building deep core strength, stability and control is central to women's health. Under physiotherapy guidance — including in our fully equipped Mount Hutton gym — we tailor an exercise-based program to your needs and progress it safely over time."] },
     ],
     faqs: [
       { q: "Can I see a female physiotherapist?", a: "Yes. Our women's health physiotherapy is provided by Prakriti, a female physiotherapist — many patients appreciate this for sensitive concerns." },
       { q: "Do I need a referral for women's health physiotherapy?", a: "No — you can book directly. A GP referral is only required for bulk-billed Care Plan treatment." },
-      { q: "Do you offer clinical Pilates?", a: "Yes. We offer clinical Pilates as part of women's health and general rehabilitation, guided by a physiotherapist and tailored to you." },
+      { q: "What can women's health physiotherapy help with?", a: "It supports pregnancy and postnatal recovery, pelvic health, core strength, post-operative rehabilitation and musculoskeletal concerns — with care tailored to you." },
     ],
     related: [
       { label: "Chronic Pain Physiotherapy Newcastle", href: "/chronic-pain-physiotherapy-newcastle" },

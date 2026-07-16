@@ -7,7 +7,7 @@ const c = servicePages["womens-health-physiotherapy-newcastle"];
 export const metadata: Metadata = {
   title: "Women's Health Physiotherapy Newcastle",
   description:
-    "Women's health physiotherapy in Newcastle with a female physiotherapist. Evidence-based, individualised care and clinical Pilates in a supportive setting.",
+    "Women's health physiotherapy in Newcastle with a female physiotherapist. Evidence-based, individualised care in a supportive setting.",
   alternates: { canonical: "/womens-health-physiotherapy-newcastle" },
 };
 

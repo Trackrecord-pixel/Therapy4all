@@ -15,12 +15,19 @@ export default function Hero() {
             injuries, chronic pain, post-op and aged care rehab — across our clinics in Mount Hutton,
             Warners Bay, Wallsend and Rutherford.
           </p>
+          <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-3.5">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-white"><Icon name="doc" className="h-6 w-6" /></span>
+            <span>
+              <span className="block text-base font-bold text-brand-800">GP Care Plan — Bulk billed, no gap</span>
+              <span className="block text-sm text-ink-600">Referred by your GP? Your physiotherapy is fully covered — you pay nothing.</span>
+            </span>
+          </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href={site.bookingUrl} className="btn-primary">Book Online <Icon name="arrow" className="h-5 w-5" /></Link>
+            <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online <Icon name="arrow" className="h-5 w-5" /></Link>
             <a href={site.phoneHref} className="btn-secondary"><Icon name="phone" className="h-5 w-5" /> {site.phone}</a>
           </div>
           <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-ink-600">
-            <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> GP Care Plans bulk billed</li>
+            <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> GP Care Plans bulk billed — no gap</li>
             <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> 4 clinics near you</li>
             <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> Fully equipped gym at Mount Hutton</li>
           </ul>

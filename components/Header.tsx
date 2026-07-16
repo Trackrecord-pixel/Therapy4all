@@ -39,7 +39,7 @@ export default function Header() {
         </div>
         <div className="hidden items-center gap-3 lg:flex">
           <a href={site.phoneHref} className="btn-secondary"><Icon name="phone" className="h-4 w-4" /> Call</a>
-          <Link href={site.bookingUrl} className="btn-primary">Book Online</Link>
+          <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online</Link>
         </div>
         <button type="button" onClick={() => setOpen((v) => !v)} className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-ink-100 text-ink-800 lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>
           <Icon name={open ? "close" : "menu"} className="h-6 w-6" />
@@ -53,7 +53,7 @@ export default function Header() {
             ))}
             <div className="grid grid-cols-2 gap-3 pt-3">
               <a href={site.phoneHref} className="btn-secondary w-full"><Icon name="phone" className="h-4 w-4" /> Call</a>
-              <Link href={site.bookingUrl} className="btn-primary w-full">Book Online</Link>
+              <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online</Link>
             </div>
           </div>
         </div>

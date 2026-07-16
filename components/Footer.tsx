@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={l.slug}><Link href={`/${l.slug}`} className="inline-flex items-center gap-2 text-ink-300 hover:text-white"><Icon name="pin" className="h-4 w-4 text-brand-300" /> {l.name}</Link></li>
               ))}
             </ul>
-            <Link href={site.bookingUrl} className="btn-accent mt-6">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+            <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-accent mt-6">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
           </div>
         </div>
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-ink-800 pt-8 text-xs text-ink-400 sm:flex-row sm:items-center">

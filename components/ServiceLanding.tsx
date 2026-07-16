@@ -46,7 +46,7 @@ export default function ServiceLanding({ c }: { c: LandingContent }) {
               <div className="card bg-brand-700 text-white">
                 <h2 className="text-xl text-white">Book an appointment</h2>
                 <p className="mt-2 text-sm text-brand-50">Across our clinics in Mount Hutton, Warners Bay, Wallsend and Rutherford. GP Care Plans bulk billed.</p>
-                <Link href="/book-online" className="btn bg-white text-brand-700 hover:bg-brand-50 mt-5 w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn bg-white text-brand-700 hover:bg-brand-50 mt-5 w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
                 <a href={site.phoneHref} className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-brand-50 hover:text-white"><Icon name="phone" className="h-4 w-4" /> {site.phone}</a>
               </div>
               <div className="card">

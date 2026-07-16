@@ -10,7 +10,7 @@ export const site = {
   phoneHref: "tel:+61450473974",
   email: "info@therapy4allgroup.com",
   emailHref: "mailto:info@therapy4allgroup.com",
-  bookingUrl: "/book-online",
+  bookingUrl: "https://therapy4all.au4.cliniko.com/bookings",
   region: "NSW",
   areas: "Newcastle, Lake Macquarie & Maitland",
   hours: "Mon–Fri 8:00am – 6:00pm",
@@ -25,6 +25,17 @@ export const primaryNav: NavLink[] = [
   { label: "Our Team", href: "/team" },
   { label: "Locations", href: "/locations" },
   { label: "Contact", href: "/contact" },
+];
+
+export const servicePagesNav: NavLink[] = [
+  { label: "Bulk Billing Physiotherapy", href: "/bulk-billing-physiotherapy-newcastle" },
+  { label: "Sports Physiotherapy", href: "/sports-physiotherapy-newcastle" },
+  { label: "Women's Health Physiotherapy", href: "/womens-health-physiotherapy-newcastle" },
+  { label: "Chronic Pain Physiotherapy", href: "/chronic-pain-physiotherapy-newcastle" },
+  { label: "Post-Operative Rehabilitation", href: "/post-operative-rehabilitation-newcastle" },
+  { label: "Musculoskeletal Physiotherapy", href: "/musculoskeletal-physiotherapy-newcastle" },
+  { label: "Workplace Physiotherapy", href: "/workplace-physiotherapy-newcastle" },
+  { label: "Aged Care Physiotherapy", href: "/aged-care-physiotherapy-newcastle" },
 ];
 
 export type Service = {
@@ -74,9 +85,9 @@ export const services: Service[] = [
     icon: "recovery",
   },
   {
-    slug: "womens-health-pilates",
-    title: "Women's Health & Clinical Pilates",
-    short: "Personalised women's health physiotherapy and clinical Pilates to build strength, control and confidence.",
+    slug: "womens-health",
+    title: "Women's Health Physiotherapy",
+    short: "Personalised women's health physiotherapy with a female physiotherapist, to build strength, confidence and quality of life.",
     icon: "strength",
   },
   {
@@ -138,7 +149,7 @@ export const team: TeamMember[] = [
       "Prakriti is a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life. She provides evidence-based, individualised care, and patients appreciate having a female physiotherapist for sensitive women's health concerns.",
       "She works closely with each patient to build personalised, goal-focused programs that manage pain, restore movement and support a confident return to everyday activities.",
     ],
-    interests: ["Women's Health", "Clinical Pilates", "Individualised Care"],
+    interests: ["Women's Health", "Individualised Care", "Exercise Therapy"],
   },
 ];
 
@@ -151,7 +162,7 @@ export const locations: Location[] = [
     slug: "physiotherapy-mount-hutton", name: "Mount Hutton", phone: "0450 473 974", phoneHref: "tel:+61450473974",
     address: "16 Wilsons Rd, Mount Hutton NSW 2290", hostClinic: "Inside Mount Hutton Medical Practice",
     region: "Lake Macquarie", postcode: "2290",
-    blurb: "Mount Hutton is our main hub, with a fully equipped rehabilitation gym for strength work, clinical Pilates and structured, hands-on physiotherapy for the Lake Macquarie community.",
+    blurb: "Mount Hutton is our main hub, with a fully equipped rehabilitation gym for strength work and structured, hands-on physiotherapy for the Lake Macquarie community.",
   },
   {
     slug: "physiotherapy-warners-bay", name: "Warners Bay", phone: "(02) 4089 4633", phoneHref: "tel:+61240894633",
@@ -182,5 +193,5 @@ export const faqs: Faq[] = [
   { q: "Where are your clinics?", a: "We have four clinics inside trusted medical practices — Mount Hutton (our main hub, with a fully equipped rehabilitation gym), Warners Bay, Wallsend and Rutherford — across Newcastle, Lake Macquarie and Maitland." },
   { q: "Do you treat sports injuries?", a: "Yes. Our team includes physiotherapists who specialise in sports and musculoskeletal injuries, combining manual therapy with targeted rehabilitation to restore movement and prevent recurrence." },
   { q: "Do you offer workplace and return-to-work rehabilitation?", a: "Yes. We support injured workers and employers with assessment, treatment, return-to-work planning and clear reporting." },
-  { q: "Can you help with women's health and clinical Pilates?", a: "Yes. We offer women's health physiotherapy and clinical Pilates, with personalised programs to build strength, control and confidence." },
+  { q: "Do you offer women's health physiotherapy?", a: "Yes. We offer women's health physiotherapy with a female physiotherapist, providing evidence-based, individualised care in a supportive and respectful setting." },
 ];

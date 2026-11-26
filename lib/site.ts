@@ -108,7 +108,7 @@ export const whyChoose = [
   { icon: "check", title: "Accessible & personalised", text: "Care designed around your goals, lifestyle and daily life — not a one-size-fits-all program." },
   { icon: "joint", title: "Hands-on + real-world rehab", text: "We combine manual therapy with structured, practical rehabilitation that lasts beyond the treatment room." },
   { icon: "doc", title: "GP Care Plans bulk billed", text: "Referred by your GP under a GP care plan (GPCCMP)? Eligible patients are bulk billed." },
-  { icon: "pin", title: "4 clinics near you", text: "Conveniently located inside trusted medical practices across Newcastle, Lake Macquarie and Maitland." },
+  { icon: "pin", title: "4 clinics near you", text: "Across Newcastle, Lake Macquarie and Maitland — referrals welcome from any GP." },
   { icon: "users", title: "Experienced team", text: "Physiotherapists with experience across pain, sports, women's health, aged care and complex rehab." },
   { icon: "pulse", title: "Long-term outcomes", text: "We focus on how you move, function and live — helping you build strength and confidence over time." },
 ];
@@ -160,7 +160,7 @@ export type Location = {
 export const locations: Location[] = [
   {
     slug: "physiotherapy-mount-hutton", name: "Mount Hutton", phone: "0450 473 974", phoneHref: "tel:+61450473974",
-    address: "16 Wilsons Rd, Mount Hutton NSW 2290", hostClinic: "Inside Mount Hutton Medical Practice",
+    address: "16 Wilsons Rd, Mount Hutton NSW 2290", hostClinic: "Our main clinic, with a rehab gym",
     region: "Lake Macquarie", postcode: "2290",
     blurb: "Mount Hutton is our main hub, with a fully equipped rehabilitation gym for strength work and structured, hands-on physiotherapy for the Lake Macquarie community.",
   },
@@ -190,7 +190,7 @@ export const faqs: Faq[] = [
   { q: "Do I need a referral to see a physiotherapist?", a: "No — you can book directly for a standard consultation without a referral. A GP referral is only needed if you want to be treated under a bulk-billed GP care plan (GPCCMP)." },
   { q: "How much does a standard consultation cost?", a: "A standard 30-minute consultation is $90. This includes assessment, hands-on treatment, and an individualised exercise and progression plan." },
   { q: "What should I bring to my first appointment?", a: "Please bring any relevant scans, imaging or reports, a list of medications, and your GP referral or Care Plan if you have one. Wear comfortable clothing you can move in." },
-  { q: "Where are your clinics?", a: "We have four clinics inside trusted medical practices — Mount Hutton (our main hub, with a fully equipped rehabilitation gym), Warners Bay, Wallsend and Rutherford — across Newcastle, Lake Macquarie and Maitland." },
+  { q: "Where are your clinics?", a: "We have four clinics — Mount Hutton (our main clinic, with a fully equipped rehabilitation gym), Warners Bay, Wallsend and Rutherford — across Newcastle, Lake Macquarie and Maitland." },
   { q: "Do you treat sports injuries?", a: "Yes. Our team includes physiotherapists with a strong interest in sports and musculoskeletal injuries, combining manual therapy with targeted rehabilitation to help you get back to your sport." },
   { q: "Do you offer workplace and return-to-work rehabilitation?", a: "Yes. We support injured workers and employers with assessment, treatment, return-to-work planning and clear reporting." },
   { q: "Do you offer women's health physiotherapy?", a: "Yes. We offer women's health physiotherapy with a female physiotherapist, providing evidence-based, individualised care in a supportive and respectful setting." },

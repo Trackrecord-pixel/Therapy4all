@@ -115,7 +115,7 @@ export default function HomePage() {
               <Link href="/physiotherapy-mount-hutton" className="btn-primary">Visit Mount Hutton <Icon name="arrow" className="h-4 w-4" /></Link>
               <a href="tel:+61450473974" className="btn-secondary"><Icon name="phone" className="h-4 w-4" /> 0450 473 974</a>
             </div>
-            <p className="mt-4 text-sm text-ink-500">Walk-ins welcome at Mount Hutton, subject to availability.</p>
+            <p className="mt-4 text-sm text-ink-500">Walk in, book online or call — walk-ins are welcome at all four clinics, subject to availability.</p>
           </div>
         </div>
       </section>

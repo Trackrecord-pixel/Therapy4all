@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 import { site } from "@/lib/site";
 
-export const viewport: Viewport = { themeColor: "#0f7b6e", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#0b1413", width: "device-width", initialScale: 1 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

@@ -1,73 +1,87 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import HeroVideo from "@/components/HeroVideo";
 import Icon from "@/components/Icon";
 import type { IconName } from "@/components/Icon";
-import SectionHeading from "@/components/SectionHeading";
-import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
 import Reveal from "@/components/Reveal";
 import { FaqSchema } from "@/components/StructuredData";
-import { services, whyChoose, faqs, team, locations, site } from "@/lib/site";
+import { faqs, team, locations } from "@/lib/site";
+
+// Homepage — "Therapy for all": one team, four clinics, a rehab gym, every kind of patient.
+// Ahpra: no testimonials, outcome claims, "specialist"/"expert" wording or unsourced stats.
+
+const trust: { icon: IconName; title: string; text: string }[] = [
+  { icon: "strength", title: "Rehab gym", text: "A fully equipped gym at our Mount Hutton hub" },
+  { icon: "doc", title: "Bulk billing", text: "For eligible patients with a GP care plan referral" },
+  { icon: "pin", title: "4 clinics", text: "Inside medical practices across the Hunter" },
+  { icon: "shield", title: "Funding welcome", text: "NDIS, WorkCover, DVA, HICAPS and private" },
+];
+
+const forEveryone: { icon: IconName; title: string; text: string; href: string }[] = [
+  { icon: "activity", title: "Sport & active life", text: "Sprains, strains and overuse injuries, with a plan to get you back to training and game day.", href: "/sports-physiotherapy-newcastle" },
+  { icon: "shield", title: "Work injuries", text: "WorkCover claims and return-to-work rehab, with clear reports for your employer and insurer.", href: "/workplace-physiotherapy-newcastle" },
+  { icon: "heart", title: "Older adults", text: "Strength, balance and mobility — in clinic, in our gym or at home — often bulk billed for eligible patients.", href: "/aged-care-physiotherapy-newcastle" },
+  { icon: "pulse", title: "Persistent pain", text: "Back, neck and long-standing pain, led by a physiotherapist with a Master of Science in Medicine (Pain Management).", href: "/chronic-pain-physiotherapy-newcastle" },
+  { icon: "recovery", title: "Before & after surgery", text: "Knee, hip and shoulder rehab, from your first steps to getting back into the gym.", href: "/post-operative-rehabilitation-newcastle" },
+  { icon: "user", title: "Women's health", text: "Supportive, individual care with a female physiotherapist.", href: "/womens-health-physiotherapy-newcastle" },
+];
+
+const gymKit = [
+  "Air rowers, ski ergs and air bikes",
+  "Power rack and free weights",
+  "Cable and leg strength machines",
+  "Turf track for agility and running drills",
+  "Treatment rooms right next to the gym floor",
+  "Small-group exercise classes",
+];
+
+const steps = [
+  { title: "See your GP", text: "Ask whether a GP Chronic Condition Management Plan (GPCCMP) is right for you." },
+  { title: "Get a referral", text: "Your GP refers you to physiotherapy under the plan — up to 5 Medicare-funded allied health visits a calendar year." },
+  { title: "Book with us", text: "Eligible patients are bulk billed at all four clinics. Bring your referral to your first visit." },
+];
 
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-      {/* Bulk billing band */}
-      <section className="bg-brand-700">
-        <div className="container-px flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
-          <p className="text-lg font-semibold text-white">GP Care Plan referral? Your physiotherapy is <span className="underline decoration-brand-300">bulk billed</span> — no out-of-pocket cost.</p>
-          <Link href="/services#gp-care-plan" className="btn bg-white text-brand-700 hover:bg-brand-50 flex-shrink-0">Learn about GP Care Plans</Link>
+      {/* Trust strip */}
+      <section className="border-b border-ink-100 bg-white">
+        <div className="container-px grid gap-6 py-10 sm:grid-cols-2 lg:grid-cols-4">
+          {trust.map((t) => (
+            <div key={t.title} className="flex items-start gap-4">
+              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-brand-100 text-brand-700"><Icon name={t.icon} className="h-5 w-5" /></span>
+              <div>
+                <p className="font-semibold text-ink-900">{t.title}</p>
+                <p className="mt-0.5 text-sm text-ink-500">{t.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Why choose */}
+      {/* Therapy for all */}
       <section className="section-py bg-white">
         <div className="container-px">
-          <SectionHeading center eyebrow="Why Therapy 4 All" title="Physiotherapy that helps you move better and feel stronger" intro="Care that is accessible, personalised and designed to improve how you move, function and live — every day." />
+          <p className="eyebrow">Therapy for all</p>
+          <h2 className="mt-4 max-w-3xl text-4xl sm:text-5xl">Whoever you are, there&rsquo;s a plan for you</h2>
+          <p className="mt-5 max-w-2xl text-lg text-ink-600">
+            Footballers, tradies, grandparents and desk workers all train on the same gym floor. We start with a
+            thorough assessment, then build a plan around your goals.
+          </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {whyChoose.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 3) * 80}>
-                <div className="card card-hover h-full">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white"><Icon name={item.icon as IconName} className="h-6 w-6" /></span>
-                  <h3 className="mt-5 text-lg text-ink-900">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-600">{item.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="section-py bg-sand">
-        <div className="container-px">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading eyebrow="Our Services" title="Expert care for every stage of recovery" intro="From bulk-billed GP Care Plans to sports injuries, chronic pain and post-operative rehab." />
-            <Link href="/services" className="btn-secondary flex-shrink-0">View all services <Icon name="arrow" className="h-4 w-4" /></Link>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {services.slice(0, 6).map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 80}><ServiceCard {...s} /></Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Locations */}
-      <section className="section-py bg-white">
-        <div className="container-px">
-          <SectionHeading center eyebrow="Our Clinics" title="Four clinics across the Hunter" intro="Conveniently located inside trusted medical practices. Mount Hutton is our main hub, with a fully equipped rehabilitation gym." />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {locations.map((loc, i) => (
-              <Reveal key={loc.slug} delay={(i % 4) * 80}>
-                <Link href={`/${loc.slug}`} className="card card-hover flex h-full flex-col">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon name="pin" className="h-6 w-6" /></span>
-                  <h3 className="mt-5 text-xl text-ink-900">{loc.name}{loc.slug === "physiotherapy-mount-hutton" && <span className="ml-2 rounded-full bg-brand-600 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-white align-middle">Main hub</span>}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{loc.hostClinic}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">View clinic <Icon name="arrow" className="h-4 w-4" /></span>
+            {forEveryone.map((f, i) => (
+              <Reveal key={f.title} delay={(i % 3) * 80}>
+                <Link href={f.href} className="card card-hover group flex h-full flex-col">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-600 text-white"><Icon name={f.icon} className="h-6 w-6" /></span>
+                  <h3 className="mt-5 text-xl">{f.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{f.text}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                    Learn more <Icon name="arrow" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </Link>
               </Reveal>
             ))}
@@ -75,31 +89,139 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Team preview */}
-      <section className="section-py bg-sand">
+      {/* Rehab gym */}
+      <section className="section-py bg-sand" id="gym">
+        <div className="container-px grid items-center gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <div className="relative isolate aspect-video overflow-hidden rounded-[2rem] border border-ink-100 bg-[#070d0c]">
+              <HeroVideo src="/videos/t4a-gym.mp4" poster="/videos/t4a-gym-poster.jpg" className="absolute inset-0 h-full w-full object-cover" />
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="eyebrow">Mount Hutton rehab gym</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl">More than a treatment room</h2>
+            <p className="mt-5 text-lg text-ink-600">
+              Hands-on treatment helps you get moving. Training builds the strength to keep going. At our Mount
+              Hutton hub, your physiotherapist takes you from the treatment room to the gym floor in the same session.
+            </p>
+            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+              {gymKit.map((g) => (
+                <li key={g} className="flex items-start gap-2.5 text-sm text-ink-700">
+                  <Icon name="check" className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-600" /> {g}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="/physiotherapy-mount-hutton" className="btn-primary">Visit Mount Hutton <Icon name="arrow" className="h-4 w-4" /></Link>
+              <a href="tel:+61450473974" className="btn-secondary"><Icon name="phone" className="h-4 w-4" /> 0450 473 974</a>
+            </div>
+            <p className="mt-4 text-sm text-ink-500">Walk-ins welcome at Mount Hutton, subject to availability.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bulk billing */}
+      <section className="section-py bg-white" id="bulk-billing">
         <div className="container-px">
-          <SectionHeading center eyebrow="Our Team" title="Experienced physiotherapists who care about your outcomes" intro="Expertise across pain management, sports, women's health, aged care and complex rehabilitation." />
-          <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {team.slice(0, 3).map((m, i) => (
-              <Reveal key={m.slug} delay={i * 90}>
-                <div className="card card-hover h-full text-center">
-                  <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 font-display text-2xl font-bold text-white">{m.name.split(" ").map((n) => n[0]).join("")}</span>
-                  <h3 className="mt-4 text-xl text-ink-900">{m.name}</h3>
-                  <p className="text-sm font-medium text-ink-500">{m.role}</p>
+          <div className="rounded-[2rem] border border-ink-100 bg-sand p-7 sm:p-12">
+            <div className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <p className="eyebrow">Bulk billing</p>
+                <h2 className="mt-4 text-4xl sm:text-5xl">Bulk billed on GP care plans</h2>
+                <p className="mt-5 text-lg text-ink-600">
+                  Living with a chronic condition? With a GP care plan referral, eligible patients are bulk billed for
+                  their Medicare-funded physiotherapy at all four clinics.
+                </p>
+                <Link href="/bulk-billing-physiotherapy-newcastle" className="btn-secondary mt-7">How bulk billing works <Icon name="arrow" className="h-4 w-4" /></Link>
+              </div>
+              <ol className="grid gap-4 lg:col-span-7">
+                {steps.map((s, i) => (
+                  <li key={s.title} className="card flex gap-5">
+                    <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand-600 text-sm font-semibold text-white">{i + 1}</span>
+                    <div>
+                      <h3 className="text-lg">{s.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-ink-600">{s.text}</p>
+                    </div>
+                  </li>
+                ))}
+                <li className="px-2 text-sm text-ink-500">
+                  No care plan? You can book privately without a referral. A standard 30-minute consultation is $90.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinics */}
+      <section className="section-py bg-sand" id="clinics">
+        <div className="container-px">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow">Our clinics</p>
+              <h2 className="mt-4 text-4xl sm:text-5xl">Four clinics across the Hunter</h2>
+              <p className="mt-4 max-w-2xl text-lg text-ink-600">Inside trusted medical practices, so it&rsquo;s easy to see your GP and your physio in one place.</p>
+            </div>
+            <Link href="/locations" className="btn-secondary flex-shrink-0">All locations <Icon name="arrow" className="h-4 w-4" /></Link>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {locations.map((loc, i) => (
+              <Reveal key={loc.slug} delay={(i % 4) * 80}>
+                <div className="card flex h-full flex-col">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">{loc.region}</p>
+                  <h3 className="mt-2 text-2xl">{loc.name}</h3>
+                  {loc.slug === "physiotherapy-mount-hutton" && (
+                    <span className="mt-2 w-fit rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-700">Main hub · Rehab gym</span>
+                  )}
+                  <p className="mt-4 text-sm text-ink-600">{loc.hostClinic}</p>
+                  <p className="mt-1 flex-1 text-sm text-ink-500">{loc.address}</p>
+                  <a href={loc.phoneHref} className="mt-5 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-brand-700">
+                    <Icon name="phone" className="h-4 w-4 text-brand-600" /> {loc.phone}
+                  </a>
+                  <Link href={`/${loc.slug}`} className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+                    Clinic details <Icon name="arrow" className="h-4 w-4" />
+                  </Link>
                 </div>
               </Reveal>
             ))}
           </div>
-          <div className="mt-10 text-center"><Link href="/team" className="btn-secondary">Meet the full team <Icon name="arrow" className="h-4 w-4" /></Link></div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="section-py bg-white">
+        <div className="container-px">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow">Our team</p>
+              <h2 className="mt-4 text-4xl sm:text-5xl">Physiotherapists who take the time to listen</h2>
+              <p className="mt-4 max-w-2xl text-lg text-ink-600">Experience across pain, sport, women&rsquo;s health, aged care and complex rehabilitation.</p>
+            </div>
+            <Link href="/team" className="btn-secondary flex-shrink-0">Meet the team <Icon name="arrow" className="h-4 w-4" /></Link>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((m) => (
+              <div key={m.slug} className="card h-full">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-600 font-display text-lg font-semibold text-white">
+                  {m.name.split(" ").map((n) => n[0]).join("")}
+                </span>
+                <h3 className="mt-5 text-xl">{m.name}</h3>
+                <p className="text-sm font-medium text-brand-700">{m.role}</p>
+                <p className="mt-3 text-sm text-ink-500">{m.interests.slice(0, 3).join(" · ")}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="section-py bg-white">
+      <section className="section-py bg-sand">
         <div className="container-px grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <SectionHeading eyebrow="FAQs" title="Your questions, answered" intro="Bulk billing, referrals, costs and what to expect at your first visit." />
-            <Link href="/faqs" className="btn-secondary mt-6">View all FAQs <Icon name="arrow" className="h-4 w-4" /></Link>
+            <p className="eyebrow">FAQs</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl">Your questions, answered</h2>
+            <p className="mt-4 text-lg text-ink-600">Bulk billing, referrals, costs and what to expect at your first visit.</p>
+            <Link href="/faqs" className="btn-secondary mt-7">All FAQs <Icon name="arrow" className="h-4 w-4" /></Link>
           </div>
           <div className="lg:col-span-7"><FAQAccordion items={faqs.slice(0, 6)} /></div>
         </div>

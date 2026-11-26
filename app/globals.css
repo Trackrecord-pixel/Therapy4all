@@ -2,32 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   Therapy 4 All — dark theme (Nov 2026)
+   Deep green-black base with Therapy 4 All teal accents.
+   ========================================================================== */
 :root {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --base: #0b1413;      /* page background */
+  --raised: #111d1b;    /* cards / alternate sections */
+  --deep: #070d0c;      /* footer */
+  --line: rgba(232, 244, 241, 0.09);
+  --line-strong: rgba(232, 244, 241, 0.22);
+  --accent: #4fd8c0;    /* T4A teal, bright for dark backgrounds */
+  --accent-soft: #8fe9da;
+  --teal: #0f7b6e;      /* brand teal (fills) */
+  --text: #eef6f4;      /* headings */
+  --text-2: #c2d1cd;    /* body */
+  --text-3: #8fa39e;    /* muted */
 }
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 106.25%; }
-  body { @apply bg-white text-ink-800 antialiased; line-height: 1.65; font-feature-settings: "kern","liga"; }
-  h1, h2, h3, h4 { @apply font-display tracking-tight text-ink-900; text-wrap: balance; }
-  ::selection { @apply bg-brand-600 text-white; }
-  :focus-visible { @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white rounded-sm; }
+  body {
+    background-color: var(--base);
+    color: var(--text-2);
+    @apply antialiased;
+    line-height: 1.65;
+    font-feature-settings: "kern", "liga";
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight;
+    color: var(--text);
+    text-wrap: balance;
+  }
+  ::selection { background: var(--accent); color: var(--base); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 }
 
 @layer components {
   .container-px { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
-  .section-py { @apply py-16 sm:py-20 lg:py-24; }
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2; }
-  .btn-primary { @apply btn bg-brand-600 text-white shadow-card hover:bg-brand-700 hover:shadow-card-hover hover:-translate-y-0.5; }
-  .btn-secondary { @apply btn border border-ink-200 bg-white text-ink-800 hover:border-brand-600 hover:text-brand-700; }
-  .btn-accent { @apply btn bg-brand-100 text-brand-800 hover:bg-brand-200; }
-  .eyebrow { @apply inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-brand-700; }
-  .card { @apply rounded-2xl border border-ink-100 bg-white p-7 shadow-card transition-all duration-300; }
-  .card-hover { @apply hover:-translate-y-1 hover:border-brand-200 hover:shadow-card-hover; }
-  .prose-ink p { @apply mb-5 text-lg leading-relaxed text-ink-700; }
+  .section-py { @apply py-16 sm:py-20 lg:py-28; }
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-7 py-3 text-base font-semibold transition-all duration-200; }
+
+  /* Primary — bright teal fill, dark text (high contrast) */
+  .btn-primary {
+    @apply btn;
+    background: var(--accent);
+    color: var(--base);
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); transform: translateY(-1px); }
+
+  /* Outline pill */
+  .btn-secondary, .btn-outline {
+    @apply btn;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-secondary:hover, .btn-outline:hover { background: rgba(238, 246, 244, 0.08); border-color: var(--text); }
+
+  .btn-accent {
+    @apply btn;
+    background: rgba(79, 216, 192, 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(79, 216, 192, 0.3);
+  }
+  .btn-accent:hover { background: rgba(79, 216, 192, 0.2); }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em];
+    color: var(--accent);
+  }
+  .card {
+    @apply rounded-3xl p-7 transition-all duration-300;
+    background: var(--raised);
+    border: 1px solid var(--line);
+  }
+  .card-hover:hover { transform: translateY(-4px); border-color: rgba(79, 216, 192, 0.45); }
+
+  .prose-ink p { @apply mb-5 text-lg leading-relaxed; color: var(--text-2); }
+  .prose-ink a:not([class*="btn"]) { @apply font-medium underline underline-offset-4; color: var(--accent); }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium;
+    background: rgba(11, 20, 19, 0.55);
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    backdrop-filter: blur(6px);
+  }
 }
+
+/* ==========================================================================
+   Dark mapping for existing utility classes (placed after utilities so these win).
+   Lets every existing page switch to the dark look without rewriting each one.
+   ========================================================================== */
+
+/* Surfaces */
+.bg-white { background-color: var(--base); }
+.bg-sand, .bg-ink-50 { background-color: var(--raised); }
+.bg-white\/95, .bg-white\/85 { background-color: rgba(11, 20, 19, 0.88); }
+.bg-brand-50, .bg-brand-100 { background-color: rgba(79, 216, 192, 0.1); }
+.bg-ink-950 { background-color: var(--deep); }
+.from-sand { --tw-gradient-from: var(--raised) var(--tw-gradient-from-position); --tw-gradient-to: rgba(17, 29, 27, 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.via-white { --tw-gradient-stops: var(--tw-gradient-from), var(--base) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.to-white { --tw-gradient-to: var(--base) var(--tw-gradient-to-position); }
+section .card, .rounded-2xl.border.bg-white, .rounded-3xl.border.bg-white { background-color: var(--raised); }
+
+/* Text */
+.text-ink-900, .text-ink-800 { color: var(--text); }
+.text-ink-700 { color: #d6e3df; }
+.text-ink-600 { color: var(--text-2); }
+.text-ink-500, .text-ink-400 { color: var(--text-3); }
+.text-brand-600, .text-brand-700, .text-brand-800 { color: var(--accent); }
+.hover\:text-brand-700:hover { color: var(--accent-soft); }
+.hover\:bg-brand-50:hover, .hover\:bg-ink-50:hover { background-color: rgba(238, 246, 244, 0.06); }
+
+/* Borders */
+.border-ink-100, .border-ink-200, .border-brand-200, .divide-ink-100 > :not([hidden]) ~ :not([hidden]) { border-color: var(--line); }
+.hover\:border-brand-200:hover, .hover\:border-brand-600:hover { border-color: rgba(79, 216, 192, 0.5); }
+
+/* Shadows are subtler on dark */
+.shadow-card { box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.6); }
+.shadow-card-hover, .hover\:shadow-card-hover:hover { box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.75); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* Phones — larger tap areas */
+@media (pointer: coarse) {
+  footer li > a { display: inline-flex; align-items: center; min-height: 44px; }
 }

@@ -36,6 +36,12 @@ export const servicePagesNav: NavLink[] = [
   { label: "Musculoskeletal Physiotherapy", href: "/musculoskeletal-physiotherapy-newcastle" },
   { label: "Workplace Physiotherapy", href: "/workplace-physiotherapy-newcastle" },
   { label: "Aged Care Physiotherapy", href: "/aged-care-physiotherapy-newcastle" },
+  { label: "Back & Neck Pain", href: "/back-neck-pain-physiotherapy-newcastle" },
+  { label: "Shoulder Pain & Rotator Cuff", href: "/shoulder-pain-physiotherapy-newcastle" },
+  { label: "Knee, Hip & Arthritis", href: "/knee-hip-pain-physiotherapy-newcastle" },
+  { label: "Knee & Hip Replacement Rehab", href: "/joint-replacement-rehabilitation-newcastle" },
+  { label: "Falls Prevention & Balance", href: "/falls-prevention-balance-newcastle" },
+  { label: "Rehab Gym & Exercise Rehab", href: "/rehab-gym-exercise-rehabilitation-newcastle" },
 ];
 
 export type Service = {

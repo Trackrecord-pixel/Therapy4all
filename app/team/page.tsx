@@ -9,7 +9,7 @@ import { team } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Meet The Team",
-  description: "Meet the Therapy 4 All physiotherapy team — Keith Ho, Daniel Lee, Zarqa Shariff, Ekta Kakadiya and Jason Lau. Expertise across pain, sports, women's health, aged care and complex rehabilitation.",
+  description: "Meet the Therapy 4 All physiotherapy team — Keith Ho, Daniel Lee, Ekta Kakadiya and Prakriti. Experience across pain, sports, women's health, aged care and complex rehabilitation.",
   alternates: { canonical: "/team" },
 };
 
@@ -17,7 +17,7 @@ export default function TeamPage() {
   return (
     <>
       <PageHero eyebrow="Our Team" title="Meet the physiotherapists behind Therapy 4 All"
-        intro="Experienced, caring clinicians with expertise across pain management, sports, women's health, aged care and complex rehabilitation."
+        intro="Experienced, caring clinicians with interests across pain management, sports, women's health, aged care and complex rehabilitation."
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Our Team", href: "/team" }]} />
       <section className="section-py bg-white">
         <div className="container-px space-y-16">

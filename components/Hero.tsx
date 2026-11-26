@@ -30,11 +30,12 @@ export default function Hero() {
           </Link>
           <a href={site.phoneHref} className="btn-secondary sm:w-auto"><Icon name="phone" className="h-5 w-5" /> {site.phone}</a>
         </div>
+        <p className="mt-4 text-sm text-[#c9d6d1]">Book online, call, or just walk in — whichever suits you.</p>
 
         <ul className="mt-10 flex flex-wrap gap-2.5">
           <li className="chip"><Icon name="doc" className="h-4 w-4 text-[#4fd8c0]" /> Bulk billing for eligible GP care plans</li>
           <li className="chip"><Icon name="strength" className="h-4 w-4 text-[#4fd8c0]" /> Rehab gym at Mount Hutton</li>
-          <li className="chip"><Icon name="clock" className="h-4 w-4 text-[#4fd8c0]" /> Walk-ins welcome at Mount Hutton</li>
+          <li className="chip"><Icon name="clock" className="h-4 w-4 text-[#4fd8c0]" /> Walk-ins welcome</li>
           <li className="chip"><Icon name="shield" className="h-4 w-4 text-[#4fd8c0]" /> NDIS · WorkCover · DVA</li>
         </ul>
       </div>

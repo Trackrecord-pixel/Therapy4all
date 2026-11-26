@@ -7,7 +7,7 @@ const c = servicePages["bulk-billing-physiotherapy-newcastle"];
 export const metadata: Metadata = {
   title: "Bulk Billing Physiotherapy Newcastle",
   description:
-    "Bulk billing physiotherapy in Newcastle and Lake Macquarie via a GP Care Plan — expert hands-on treatment with no out-of-pocket cost. Book at one of our 4 clinics.",
+    "Bulk billing physiotherapy in Newcastle and Lake Macquarie on a GP care plan — bulk billed for eligible patients. Book at one of our 4 clinics.",
   alternates: { canonical: "/bulk-billing-physiotherapy-newcastle" },
 };
 

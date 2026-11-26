@@ -35,7 +35,6 @@ const gymKit = [
   "Cable and leg strength machines",
   "Turf track for agility and running drills",
   "Treatment rooms right next to the gym floor",
-  "Small-group exercise classes",
 ];
 
 const steps = [
@@ -108,6 +107,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What we treat — mirrors our Google Business Profile services */}
+      <section className="bg-white pb-16">
+        <div className="container-px">
+          <p className="text-sm font-semibold text-ink-700">Common reasons people see us</p>
+          <ul className="mt-4 flex flex-wrap gap-2.5">
+            {[
+              { label: "Lower back & neck pain", href: "/back-neck-pain-physiotherapy-newcastle" },
+              { label: "Shoulder & rotator cuff", href: "/shoulder-pain-physiotherapy-newcastle" },
+              { label: "Knee, hip & arthritis", href: "/knee-hip-pain-physiotherapy-newcastle" },
+              { label: "Knee & hip replacement rehab", href: "/joint-replacement-rehabilitation-newcastle" },
+              { label: "Falls prevention & balance", href: "/falls-prevention-balance-newcastle" },
+              { label: "Exercise rehab & strength", href: "/rehab-gym-exercise-rehabilitation-newcastle" },
+              { label: "Sports injuries", href: "/sports-physiotherapy-newcastle" },
+              { label: "Work injuries (WorkCover)", href: "/workplace-physiotherapy-newcastle" },
+              { label: "Chronic pain", href: "/chronic-pain-physiotherapy-newcastle" },
+              { label: "Women's health", href: "/womens-health-physiotherapy-newcastle" },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="inline-flex items-center gap-2 rounded-full border border-ink-200 px-4 py-2 text-sm font-medium text-ink-800 transition-colors hover:border-brand-600 hover:text-brand-700">
+                  {l.label} <Icon name="arrow" className="h-3.5 w-3.5" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Rehab gym */}
       <section className="section-py bg-sand" id="gym">
         <div className="container-px grid items-center gap-12 lg:grid-cols-12">
@@ -131,7 +157,7 @@ export default function HomePage() {
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/physiotherapy-mount-hutton" className="btn-primary">Visit Mount Hutton <Icon name="arrow" className="h-4 w-4" /></Link>
+              <Link href="/rehab-gym-exercise-rehabilitation-newcastle" className="btn-primary">About the rehab gym <Icon name="arrow" className="h-4 w-4" /></Link>
               <a href="tel:+61450473974" className="btn-secondary"><Icon name="phone" className="h-4 w-4" /> 0450 473 974</a>
             </div>
             <p className="mt-4 text-sm text-ink-500">Walk-ins welcome at Mount Hutton, subject to availability.</p>

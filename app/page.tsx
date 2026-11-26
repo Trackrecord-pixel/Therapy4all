@@ -4,10 +4,11 @@ import HeroVideo from "@/components/HeroVideo";
 import Icon from "@/components/Icon";
 import type { IconName } from "@/components/Icon";
 import CTASection from "@/components/CTASection";
+import ClinicFinder from "@/components/ClinicFinder";
 import FAQAccordion from "@/components/FAQAccordion";
 import Reveal from "@/components/Reveal";
 import { FaqSchema } from "@/components/StructuredData";
-import { faqs, team, locations } from "@/lib/site";
+import { faqs, team } from "@/lib/site";
 
 // Homepage — "Therapy for all": one team, four clinics, a rehab gym, every kind of patient.
 // Ahpra: no testimonials, outcome claims, "specialist"/"expert" wording or unsourced stats.
@@ -47,6 +48,24 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      {/* Find a clinic — where to go and who to call (Mount Hutton featured) */}
+      <section className="section-py bg-white scroll-mt-24" id="clinics">
+        <div className="container-px">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow">Our clinics</p>
+              <h2 className="mt-4 text-4xl sm:text-5xl">Find your clinic</h2>
+              <p className="mt-4 max-w-2xl text-lg text-ink-600">
+                Four clinics inside medical practices across the Hunter. Mount Hutton is our main clinic, with online
+                booking and walk-ins. For our other clinics, call the clinic to book.
+              </p>
+            </div>
+            <Link href="/locations" className="btn-secondary flex-shrink-0">All locations <Icon name="arrow" className="h-4 w-4" /></Link>
+          </div>
+          <div className="mt-12"><ClinicFinder /></div>
+        </div>
+      </section>
 
       {/* Trust strip */}
       <section className="border-b border-ink-100 bg-white">
@@ -115,7 +134,7 @@ export default function HomePage() {
               <Link href="/physiotherapy-mount-hutton" className="btn-primary">Visit Mount Hutton <Icon name="arrow" className="h-4 w-4" /></Link>
               <a href="tel:+61450473974" className="btn-secondary"><Icon name="phone" className="h-4 w-4" /> 0450 473 974</a>
             </div>
-            <p className="mt-4 text-sm text-ink-500">Walk in, book online or call — walk-ins are welcome at all four clinics, subject to availability.</p>
+            <p className="mt-4 text-sm text-ink-500">Walk-ins welcome at Mount Hutton, subject to availability.</p>
           </div>
         </div>
       </section>
@@ -149,41 +168,6 @@ export default function HomePage() {
                 </li>
               </ol>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Clinics */}
-      <section className="section-py bg-sand" id="clinics">
-        <div className="container-px">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <p className="eyebrow">Our clinics</p>
-              <h2 className="mt-4 text-4xl sm:text-5xl">Four clinics across the Hunter</h2>
-              <p className="mt-4 max-w-2xl text-lg text-ink-600">Inside trusted medical practices, so it&rsquo;s easy to see your GP and your physio in one place.</p>
-            </div>
-            <Link href="/locations" className="btn-secondary flex-shrink-0">All locations <Icon name="arrow" className="h-4 w-4" /></Link>
-          </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {locations.map((loc, i) => (
-              <Reveal key={loc.slug} delay={(i % 4) * 80}>
-                <div className="card flex h-full flex-col">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">{loc.region}</p>
-                  <h3 className="mt-2 text-2xl">{loc.name}</h3>
-                  {loc.slug === "physiotherapy-mount-hutton" && (
-                    <span className="mt-2 w-fit rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-700">Main hub · Rehab gym</span>
-                  )}
-                  <p className="mt-4 text-sm text-ink-600">{loc.hostClinic}</p>
-                  <p className="mt-1 flex-1 text-sm text-ink-500">{loc.address}</p>
-                  <a href={loc.phoneHref} className="mt-5 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-brand-700">
-                    <Icon name="phone" className="h-4 w-4 text-brand-600" /> {loc.phone}
-                  </a>
-                  <Link href={`/${loc.slug}`} className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
-                    Clinic details <Icon name="arrow" className="h-4 w-4" />
-                  </Link>
-                </div>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>

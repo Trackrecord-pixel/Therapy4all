@@ -14,10 +14,10 @@ import { faqs, team } from "@/lib/site";
 // Ahpra: no testimonials, outcome claims, "specialist"/"expert" wording or unsourced stats.
 
 const trust: { icon: IconName; title: string; text: string }[] = [
-  { icon: "strength", title: "Rehab gym", text: "A fully equipped gym at our Mount Hutton hub" },
-  { icon: "doc", title: "Bulk billing", text: "For eligible patients with a GP care plan referral" },
-  { icon: "pin", title: "4 clinics", text: "Inside medical practices across the Hunter" },
-  { icon: "shield", title: "Funding welcome", text: "NDIS, WorkCover, DVA, HICAPS and private" },
+  { icon: "doc", title: "Bulk billed on GP care plans", text: "At all four clinics, for eligible patients — referrals from any GP" },
+  { icon: "shield", title: "Workers compensation", text: "WorkCover claims, plus NDIS, DVA, HICAPS and private" },
+  { icon: "strength", title: "Rehab gym", text: "A fully equipped gym at our Mount Hutton clinic" },
+  { icon: "pin", title: "4 clinics", text: "Mount Hutton, Warners Bay, Wallsend and Rutherford" },
 ];
 
 const forEveryone: { icon: IconName; title: string; text: string; href: string }[] = [
@@ -57,7 +57,7 @@ export default function HomePage() {
               <p className="eyebrow">Our clinics</p>
               <h2 className="mt-4 text-4xl sm:text-5xl">Find your clinic</h2>
               <p className="mt-4 max-w-2xl text-lg text-ink-600">
-                Four clinics inside medical practices across the Hunter. Mount Hutton is our main clinic, with online
+                Four clinics across the Hunter. Mount Hutton is our main clinic, with online
                 booking and walk-ins. For our other clinics, call the clinic to book.
               </p>
             </div>

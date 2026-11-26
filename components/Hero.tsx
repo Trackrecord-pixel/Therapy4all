@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative isolate flex min-h-[88vh] flex-col overflow-hidden bg-cover bg-center"
+      className="relative isolate flex min-h-[calc(100vh-128px)] flex-col overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url(/videos/t4a-hero-poster.jpg)", backgroundColor: "#070d0c" }}
     >
       <HeroVideo src="/videos/t4a-hero.mp4" poster="/videos/t4a-hero-poster.jpg" />
@@ -22,16 +22,16 @@ export default function Hero() {
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-72 bg-gradient-to-t from-[#070d0c] to-transparent" />
 
       {/* Message */}
-      <div className="container-px flex w-full flex-1 items-center py-14 lg:py-16">
+      <div className="container-px flex w-full flex-1 items-center py-10 lg:py-12">
         <div className="max-w-3xl">
           <p className="eyebrow">Newcastle · Lake Macquarie · Maitland</p>
-          <p aria-hidden="true" className="mt-4 font-display text-5xl font-bold leading-[1.02] tracking-tight text-[#f2fbf8] sm:text-7xl lg:text-8xl">
+          <p aria-hidden="true" className="mt-4 font-display text-5xl font-bold leading-[1.02] tracking-tight text-[#f2fbf8] sm:text-6xl lg:text-7xl">
             Move better.<br /><span className="text-[#4fd8c0]">Feel stronger.</span>
           </p>
-          <h1 className="mt-6 max-w-2xl text-lg font-medium leading-snug text-[#e6f4f0] sm:text-2xl">
+          <h1 className="mt-5 max-w-2xl text-lg font-medium leading-snug text-[#e6f4f0] sm:text-2xl">
             Physiotherapy and a rehab gym for everyone — four clinics across the Hunter.
           </h1>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary sm:w-auto">
               Book Mount Hutton online <Icon name="arrow" className="h-5 w-5" />
             </Link>
@@ -41,7 +41,7 @@ export default function Hero() {
       </div>
 
       {/* Clinic strip — one tap to call */}
-      <div className="container-px w-full pb-8">
+      <div className="container-px w-full pb-6">
         <ul className="grid grid-cols-2 overflow-hidden rounded-2xl border border-[rgba(238,246,244,0.14)] bg-[rgba(7,13,12,0.7)] backdrop-blur-md lg:grid-cols-4">
           {ordered.map((loc, i) => {
             const isHub = loc.slug === hub.slug;

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCallBar from "@/components/MobileCallBar";
 import { OrganizationSchema, WebSiteSchema } from "@/components/StructuredData";
 import { site } from "@/lib/site";
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <MobileCallBar />
       </body>
     </html>
   );

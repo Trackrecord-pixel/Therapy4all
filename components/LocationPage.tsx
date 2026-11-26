@@ -28,8 +28,8 @@ export default function LocationPage({ loc }: { loc: Location }) {
               </div>
             )}
             <div className="space-y-4 text-ink-700">
-              <p>Therapy 4 All Physiotherapy in {loc.name} offers hands-on, practical physiotherapy {loc.hostClinic.toLowerCase()}. We help you move better and feel stronger — with care that lasts beyond the treatment room.</p>
-              <p>Whether you're recovering from a sports or work injury, managing ongoing pain, or rehabilitating after surgery, our {loc.name} team combines manual therapy with structured, real-world rehabilitation tailored to your goals. GP Care Plan referrals are bulk billed.</p>
+              <p>Therapy 4 All Physiotherapy in {loc.name} offers hands-on, practical physiotherapy{isHub ? " at our main clinic" : ` ${loc.hostClinic.toLowerCase()}`}. We help you move better and feel stronger — with care that lasts beyond the treatment room.</p>
+              <p>Whether you're recovering from a sports or work injury, managing ongoing pain, or rehabilitating after surgery, our {loc.name} team combines manual therapy with structured, real-world rehabilitation tailored to your goals. Eligible patients with a GP care plan referral — from any GP — are bulk billed, and we also see workers compensation (WorkCover) claims.</p>
               {isHub && <p>As our main hub, the Mount Hutton clinic features a fully equipped rehabilitation gym — ideal for strength and conditioning and structured exercise programs supervised by our physiotherapists.</p>}
             </div>
             <div className="mt-8">

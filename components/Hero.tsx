@@ -31,6 +31,11 @@ export default function Hero() {
           <h1 className="mt-5 max-w-2xl text-lg font-medium leading-snug text-[#e6f4f0] sm:text-2xl">
             Physiotherapy and a rehab gym for everyone — four clinics across the Hunter.
           </h1>
+          <p className="mt-5 inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border border-[rgba(79,216,192,0.45)] bg-[rgba(7,13,12,0.55)] px-4 py-3 text-base font-semibold text-[#f2fbf8] backdrop-blur sm:text-lg">
+            <Icon name="doc" className="h-5 w-5 text-[#4fd8c0]" />
+            <span>Bulk billed with a GP care plan<span className="font-normal text-[#c2d1cd]"> — eligible patients, referrals from any GP</span></span>
+          </p>
+          <p className="mt-3 text-sm text-[#c2d1cd]">Workers compensation (WorkCover), NDIS, DVA and private patients welcome.</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary sm:w-auto">
               Book Mount Hutton online <Icon name="arrow" className="h-5 w-5" />

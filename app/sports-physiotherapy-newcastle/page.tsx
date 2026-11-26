@@ -7,7 +7,7 @@ const c = servicePages["sports-physiotherapy-newcastle"];
 export const metadata: Metadata = {
   title: "Sports Physiotherapy Newcastle",
   description:
-    "Sports physiotherapy in Newcastle and Lake Macquarie. Hands-on treatment and rehab for sports injuries — recover, restore movement and prevent recurrence.",
+    "Sports physiotherapy in Newcastle and Lake Macquarie. Hands-on treatment and rehab for sports injuries — recover, restore movement and get back to your sport.",
   alternates: { canonical: "/sports-physiotherapy-newcastle" },
 };
 

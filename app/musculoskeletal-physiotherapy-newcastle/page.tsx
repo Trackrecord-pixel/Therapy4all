@@ -7,7 +7,7 @@ const c = servicePages["musculoskeletal-physiotherapy-newcastle"];
 export const metadata: Metadata = {
   title: "Musculoskeletal Physiotherapy Newcastle",
   description:
-    "Musculoskeletal physiotherapy in Newcastle for back, neck, joint and muscle pain. Expert hands-on treatment and targeted exercise for lasting results.",
+    "Musculoskeletal physiotherapy in Newcastle for back, neck, joint and muscle pain. Hands-on treatment and targeted exercise, in clinic and in our gym.",
   alternates: { canonical: "/musculoskeletal-physiotherapy-newcastle" },
 };
 

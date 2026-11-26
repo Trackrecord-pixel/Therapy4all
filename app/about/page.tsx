@@ -42,7 +42,7 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-              <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary mt-7 w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+              <Link href="/book-online" className="btn-primary mt-7 w-full">Book Now <Icon name="arrow" className="h-4 w-4" /></Link>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export const servicePages: Record<string, LandingContent> = {
     serviceName: "Women's Health Physiotherapy Newcastle",
     intro: "Compassionate women's health physiotherapy in Newcastle and Lake Macquarie, with a female physiotherapist — evidence-based, individualised care to improve your health, confidence and quality of life.",
     lead: [
-      "At Therapy 4 All, our women's health physiotherapy is led by Prakriti, a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life.",
+      "At Therapy 4 All, our women's health physiotherapy is led by Prakriti Shrestha, a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life.",
       "We understand that women's health concerns can be sensitive, which is why many patients value having a female physiotherapist. Prakriti provides evidence-based, individualised care in a supportive, respectful setting.",
       "Whether you're navigating pregnancy or the postnatal period, recovering after surgery, or managing an ongoing concern, we build a personalised program designed around you.",
     ],
@@ -77,7 +77,7 @@ export const servicePages: Record<string, LandingContent> = {
       { h2: "Strength and core rehabilitation", body: ["Building deep core strength, stability and control is central to women's health. Under physiotherapy guidance — including in our fully equipped Mount Hutton gym — we tailor an exercise-based program to your needs and progress it safely over time."] },
     ],
     faqs: [
-      { q: "Can I see a female physiotherapist?", a: "Yes. Our women's health physiotherapy is provided by Prakriti, a female physiotherapist — many patients appreciate this for sensitive concerns." },
+      { q: "Can I see a female physiotherapist?", a: "Yes. Our women's health physiotherapy is provided by Prakriti Shrestha, a female physiotherapist — many patients appreciate this for sensitive concerns." },
       { q: "Do I need a referral for women's health physiotherapy?", a: "No — you can book directly. A GP referral is only required for bulk-billed Care Plan treatment." },
       { q: "What can women's health physiotherapy help with?", a: "It supports pregnancy and postnatal recovery, pelvic health, core strength, post-operative rehabilitation and musculoskeletal concerns — with care tailored to you." },
     ],

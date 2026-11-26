@@ -144,7 +144,7 @@ export const team: TeamMember[] = [
     interests: ["Sports & MSK", "Shoulder & Neck", "Manual Therapy"],
   },
   {
-    slug: "kriti", name: "Prakriti", role: "Physiotherapist \u00b7 Women's Health", photo: "/team/kriti.jpg",
+    slug: "kriti", name: "Prakriti Shrestha", role: "Physiotherapist \u00b7 Women's Health", photo: "/team/kriti.jpg",
     bio: [
       "Prakriti is a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life. She provides evidence-based, individualised care, and patients appreciate having a female physiotherapist for sensitive women's health concerns.",
       "She works closely with each patient to build personalised, goal-focused programs that manage pain, restore movement and support a confident return to everyday activities.",

@@ -12,7 +12,7 @@ export default function LocationPage({ loc }: { loc: Location }) {
   const isHub = loc.slug === "physiotherapy-mount-hutton";
   const faqs = [
     { q: `Where is your ${loc.name} physiotherapy clinic?`, a: `Our ${loc.name} clinic is ${loc.hostClinic.toLowerCase()}, at ${loc.address}. Call ${loc.phone} to book.` },
-    { q: `Do you bulk bill at ${loc.name}?`, a: `Yes. If your GP refers you under a Chronic Disease Management (CDM/EPC) plan, we bulk bill your physiotherapy at ${loc.name} — no out-of-pocket cost.` },
+    { q: `Do you bulk bill at ${loc.name}?`, a: `Yes, for eligible patients. If your GP refers you under a GP Chronic Condition Management Plan (GPCCMP), we bulk bill your Medicare-funded physiotherapy at ${loc.name}.` },
     { q: `Do I need a referral for physiotherapy in ${loc.name}?`, a: `No — you can book a standard consultation directly. A GP referral is only needed for bulk-billed Care Plan treatment.` },
   ];
   return (
@@ -28,8 +28,8 @@ export default function LocationPage({ loc }: { loc: Location }) {
               </div>
             )}
             <div className="space-y-4 text-ink-700">
-              <p>Therapy 4 All Physiotherapy in {loc.name} offers hands-on, practical physiotherapy {loc.hostClinic.toLowerCase()}. We help you move better and feel stronger — with care that lasts beyond the treatment room.</p>
-              <p>Whether you're recovering from a sports or work injury, managing ongoing pain, or rehabilitating after surgery, our {loc.name} team combines manual therapy with structured, real-world rehabilitation tailored to your goals. GP Care Plan referrals are bulk billed.</p>
+              <p>Therapy 4 All Physiotherapy in {loc.name} offers hands-on, practical physiotherapy{isHub ? " at our main clinic" : ` ${loc.hostClinic.toLowerCase()}`}. We help you move better and feel stronger — with care that lasts beyond the treatment room.</p>
+              <p>Whether you're recovering from a sports or work injury, managing ongoing pain, or rehabilitating after surgery, our {loc.name} team combines manual therapy with structured, real-world rehabilitation tailored to your goals. Eligible patients with a GP care plan referral — from any GP — are bulk billed, and we also see workers compensation (WorkCover) claims.</p>
               {isHub && <p>As our main hub, the Mount Hutton clinic features a fully equipped rehabilitation gym — ideal for strength and conditioning and structured exercise programs supervised by our physiotherapists.</p>}
             </div>
             <div className="mt-8">
@@ -57,7 +57,11 @@ export default function LocationPage({ loc }: { loc: Location }) {
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="phone" className="h-4 w-4 text-brand-600" /> <a href={loc.phoneHref} className="font-semibold hover:text-brand-700">{loc.phone}</a></p>
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="clock" className="h-4 w-4 text-brand-600" /> {site.hours}</p>
                 <div className="mt-5 flex flex-col gap-3">
-                  <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  {isHub ? (
+                    <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  ) : (
+                    <a href={loc.phoneHref} className="btn-primary w-full"><Icon name="phone" className="h-4 w-4" /> Call {loc.phone} to book</a>
+                  )}
                   <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Therapy 4 All " + loc.address)}`} target="_blank" rel="noopener noreferrer" className="btn-secondary w-full">Get directions</a>
                 </div>
               </div>

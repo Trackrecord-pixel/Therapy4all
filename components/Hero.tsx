@@ -1,53 +1,77 @@
-import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
-import { site } from "@/lib/site";
+import HeroVideo from "./HeroVideo";
+import { site, locations } from "@/lib/site";
+
+// Homepage hero — full-bleed background video (dark theme).
+// First screen answers two questions only: "is this for me?" and "who do I call?".
+// Clinic strip at the bottom: Mount Hutton (main clinic: online booking + walk-ins) highlighted,
+// the other three clinics are booked by phone.
+// Ahpra: no outcome claims.
 export default function Hero() {
+  const hub = locations.find((l) => l.slug === "physiotherapy-mount-hutton")!;
+  const ordered = [hub, ...locations.filter((l) => l.slug !== hub.slug)];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-sand via-white to-white">
-      <div className="pointer-events-none absolute right-0 top-0 h-[34rem] w-[34rem] translate-x-1/3 -translate-y-1/4 rounded-full bg-brand-100 blur-3xl" aria-hidden="true" />
-      <div className="container-px relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
-        <div className="animate-fade-up">
-          <span className="eyebrow"><Icon name="pulse" className="h-4 w-4" /> Physiotherapy · Hunter Region</span>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.08] text-ink-900 sm:text-5xl lg:text-6xl">Move Better.<br />Feel Stronger.</h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-600">
-            Hands-on, practical physiotherapy that gets you back to what matters. Sports and everyday
-            injuries, chronic pain, post-op and aged care rehab — across our clinics in Mount Hutton,
-            Warners Bay, Wallsend and Rutherford.
+    <section
+      className="relative isolate flex min-h-[calc(100vh-128px)] flex-col overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: "url(/videos/t4a-hero-poster.jpg)", backgroundColor: "#070d0c" }}
+    >
+      <HeroVideo src="/videos/t4a-hero.mp4" poster="/videos/t4a-hero-poster.jpg" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[rgba(7,13,12,0.6)]" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-72 bg-gradient-to-t from-[#070d0c] to-transparent" />
+
+      {/* Message */}
+      <div className="container-px flex w-full flex-1 items-center py-10 lg:py-12">
+        <div className="max-w-3xl">
+          <p className="eyebrow">Newcastle · Lake Macquarie · Maitland</p>
+          <p aria-hidden="true" className="mt-4 font-display text-5xl font-bold leading-[1.02] tracking-tight text-[#f2fbf8] sm:text-6xl lg:text-7xl">
+            Move better.<br /><span className="text-[#4fd8c0]">Feel stronger.</span>
           </p>
-          <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-3.5">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-white"><Icon name="doc" className="h-6 w-6" /></span>
-            <span>
-              <span className="block text-base font-bold text-brand-800">GP Care Plan — Bulk billed, no gap</span>
-              <span className="block text-sm text-ink-600">Referred by your GP? Your physiotherapy is fully covered — you pay nothing.</span>
-            </span>
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online <Icon name="arrow" className="h-5 w-5" /></Link>
-            <a href={site.phoneHref} className="btn-secondary"><Icon name="phone" className="h-5 w-5" /> {site.phone}</a>
-          </div>
-          <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-ink-600">
-            <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> GP Care Plans bulk billed — no gap</li>
-            <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> 4 clinics near you</li>
-            <li className="inline-flex items-center gap-2"><Icon name="check" className="h-5 w-5 text-brand-600" /> Fully equipped gym at Mount Hutton</li>
-          </ul>
-        </div>
-        <div className="relative animate-fade-in">
-          <div className="relative overflow-hidden rounded-[2rem] border border-ink-100 bg-white shadow-card-hover">
-            <div className="relative aspect-[4/5] w-full">
-              <Image src="/images/hero.jpg" alt="A physiotherapist helping a patient move better and feel stronger" fill priority sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
-            </div>
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-ink-100 bg-white p-5 shadow-card sm:block">
-            <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon name="doc" className="h-6 w-6" /></span>
-              <div>
-                <p className="text-sm font-semibold text-ink-900">GP Care Plan</p>
-                <p className="text-xs text-ink-500">Bulk billed — no gap</p>
-              </div>
-            </div>
+          <h1 className="mt-5 max-w-2xl text-lg font-medium leading-snug text-[#e6f4f0] sm:text-2xl">
+            Physiotherapy and a rehab gym for everyone — four clinics across the Hunter.
+          </h1>
+          <p className="mt-5 inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border border-[rgba(79,216,192,0.45)] bg-[rgba(7,13,12,0.55)] px-4 py-3 text-base font-semibold text-[#f2fbf8] backdrop-blur sm:text-lg">
+            <Icon name="doc" className="h-5 w-5 text-[#4fd8c0]" />
+            <span>Bulk billed with a GP care plan<span className="font-normal text-[#c2d1cd]"> — eligible patients, referrals from any GP</span></span>
+          </p>
+          <p className="mt-3 text-sm text-[#c2d1cd]">Workers compensation (WorkCover), NDIS, DVA and private patients welcome.</p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary sm:w-auto">
+              Book Mount Hutton online <Icon name="arrow" className="h-5 w-5" />
+            </Link>
+            <a href={hub.phoneHref} className="btn-secondary sm:w-auto"><Icon name="phone" className="h-5 w-5" /> {hub.phone}</a>
           </div>
         </div>
+      </div>
+
+      {/* Clinic strip — one tap to call */}
+      <div className="container-px w-full pb-6">
+        <ul className="grid grid-cols-2 overflow-hidden rounded-2xl border border-[rgba(238,246,244,0.14)] bg-[rgba(7,13,12,0.7)] backdrop-blur-md lg:grid-cols-4">
+          {ordered.map((loc, i) => {
+            const isHub = loc.slug === hub.slug;
+            return (
+              <li
+                key={loc.slug}
+                className={`${i > 0 ? "lg:border-l" : ""} ${i % 2 === 1 ? "border-l lg:border-l" : ""} ${i > 1 ? "border-t lg:border-t-0" : ""} border-[rgba(238,246,244,0.1)]`}
+              >
+                <a
+                  href={loc.phoneHref}
+                  className={`flex h-full flex-col gap-1 p-4 transition-colors hover:bg-[rgba(79,216,192,0.08)] sm:p-5 ${isHub ? "shadow-[inset_0_0_0_1.5px_#4fd8c0] rounded-2xl lg:rounded-r-none" : ""}`}
+                >
+                  <span className="flex items-center gap-2 text-sm font-semibold text-[#f2fbf8] sm:text-base">
+                    {loc.name}
+                    {isHub && <span className="rounded-full bg-[#4fd8c0] px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-[#0b1413]">Main</span>}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-base font-semibold text-[#4fd8c0] sm:text-lg">
+                    <Icon name="phone" className="h-4 w-4" /> {loc.phone}
+                  </span>
+                  <span className="text-xs text-[#a9bab5]">{isHub ? "Online booking · walk-ins" : "Call to book"}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

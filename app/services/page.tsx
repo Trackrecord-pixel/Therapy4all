@@ -27,7 +27,7 @@ export default function ServicesPage() {
           <div className="card border-brand-200 bg-brand-50">
             <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white"><Icon name="doc" className="h-6 w-6" /></span>
             <h2 className="mt-5 text-2xl text-ink-900">GP Care Plan (Bulk Billing)</h2>
-            <p className="mt-2 text-ink-600">Referred by your GP under a Chronic Disease Management (CDM/EPC) plan? We bulk bill — no out-of-pocket cost.</p>
+            <p className="mt-2 text-ink-600">Referred by your GP under a GP Chronic Condition Management Plan (GPCCMP)? Eligible patients are bulk billed.</p>
             <ul className="mt-5 grid gap-3">
               {["Relevant medical history review","Assessment of your current condition","Functional assessment based on daily activities","Review of imaging and reports","Hands-on treatment (soft tissue, joint mobilisation)","Individualised plan, education & home exercises"].map((p) => (
                 <li key={p} className="flex items-start gap-3"><span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700"><Icon name="check" className="h-4 w-4" /></span><span className="text-sm text-ink-700">{p}</span></li>

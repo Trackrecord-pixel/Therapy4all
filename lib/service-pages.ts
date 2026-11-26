@@ -6,10 +6,10 @@ export const servicePages: Record<string, LandingContent> = {
     eyebrow: "Bulk Billing Physiotherapy Newcastle",
     h1: "Bulk Billing Physiotherapy in Newcastle",
     serviceName: "Bulk Billing Physiotherapy Newcastle",
-    intro: "Bulk-billed physiotherapy in Newcastle and Lake Macquarie through a GP Care Plan — expert, hands-on treatment with no out-of-pocket cost.",
+    intro: "Bulk-billed physiotherapy in Newcastle and Lake Macquarie through a GP Care Plan — hands-on treatment, bulk billed for eligible patients.",
     lead: [
-      "Did you know your physiotherapy could be completely bulk billed? At Therapy 4 All, patients referred by their GP under a Chronic Disease Management (CDM/EPC) plan receive expert physiotherapy with no out-of-pocket cost — at our clinics in Mount Hutton, Warners Bay, Wallsend and Rutherford.",
-      "A GP Care Plan (also called an Enhanced Primary Care or EPC plan) is designed for people managing an ongoing or chronic condition. If you qualify, Medicare covers up to five allied health visits per year, and we bulk bill those visits so you pay nothing.",
+      "Did you know your physiotherapy could be bulk billed? At Therapy 4 All, eligible patients referred by their GP under a GP Chronic Condition Management Plan (GPCCMP) are bulk billed for their Medicare-funded physiotherapy, with no out-of-pocket cost — at our clinics in Mount Hutton, Warners Bay, Wallsend and Rutherford.",
+      "A GP Chronic Condition Management Plan (GPCCMP) replaced the older GP Management Plan and EPC arrangements on 1 July 2025 (older plans can be used until 30 June 2027). If you're eligible, Medicare funds up to five allied health visits per calendar year, and we bulk bill those visits.",
       "It's the same thorough, hands-on care as any of our appointments — just funded through Medicare.",
     ],
     sections: [
@@ -19,9 +19,9 @@ export const servicePages: Record<string, LandingContent> = {
       { h2: "How to get started", body: ["Getting started is simple: book an appointment with your GP and ask whether you're eligible for a Chronic Disease Management (Care Plan). If you are, they'll provide a referral. Bring it to your first appointment with us and we'll bulk bill your treatment.", "No referral yet? You're still welcome to book a standard consultation directly — and we can guide you on whether a Care Plan may suit you."] },
     ],
     faqs: [
-      { q: "Does bulk billing mean it's free?", a: "Yes — with a valid GP Care Plan referral, Medicare covers the cost and we bulk bill, so there's no out-of-pocket cost to you for those sessions." },
+      { q: "Does bulk billing mean it's free?", a: "For eligible patients, yes — with a valid GP care plan referral we bulk bill your Medicare-funded sessions, so there's no gap to pay for those visits." },
       { q: "How many bulk-billed sessions can I have?", a: "Medicare covers up to five allied health visits per calendar year under a Chronic Disease Management plan, shared across all allied health services." },
-      { q: "How do I get a GP Care Plan?", a: "See your GP and ask whether you're eligible for a Chronic Disease Management (CDM/EPC) plan. If so, they'll write a referral you can bring to us." },
+      { q: "How do I get a GP Care Plan?", a: "See your GP and ask whether you're eligible for a GP Chronic Condition Management Plan (GPCCMP). If so, they'll write a referral you can bring to us." },
     ],
     related: [
       { label: "Musculoskeletal Physiotherapy Newcastle", href: "/musculoskeletal-physiotherapy-newcastle" },
@@ -35,7 +35,7 @@ export const servicePages: Record<string, LandingContent> = {
     eyebrow: "Sports Physiotherapy Newcastle",
     h1: "Sports Physiotherapy in Newcastle",
     serviceName: "Sports Physiotherapy Newcastle",
-    intro: "Expert sports physiotherapy in Newcastle and Lake Macquarie — hands-on treatment and rehabilitation to recover from injury, restore movement and prevent recurrence.",
+    intro: "Sports physiotherapy in Newcastle and Lake Macquarie — hands-on treatment and rehabilitation to recover from injury, restore movement and get back to your sport.",
     lead: [
       "Whether you're a weekend runner, a competitive athlete or someone who's picked up a niggling injury, Therapy 4 All's sports physiotherapists help you recover quickly and safely — and get back to the activity you love.",
       "Our team combines skilled manual therapy with targeted, progressive exercise, so you don't just settle the pain — you rebuild strength and address the cause to stop it coming back.",
@@ -66,7 +66,7 @@ export const servicePages: Record<string, LandingContent> = {
     serviceName: "Women's Health Physiotherapy Newcastle",
     intro: "Compassionate women's health physiotherapy in Newcastle and Lake Macquarie, with a female physiotherapist — evidence-based, individualised care to improve your health, confidence and quality of life.",
     lead: [
-      "At Therapy 4 All, our women's health physiotherapy is led by Prakriti, a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life.",
+      "At Therapy 4 All, our women's health physiotherapy is led by Prakriti Shrestha, a compassionate physiotherapist passionate about helping women improve their health, confidence and quality of life.",
       "We understand that women's health concerns can be sensitive, which is why many patients value having a female physiotherapist. Prakriti provides evidence-based, individualised care in a supportive, respectful setting.",
       "Whether you're navigating pregnancy or the postnatal period, recovering after surgery, or managing an ongoing concern, we build a personalised program designed around you.",
     ],
@@ -77,7 +77,7 @@ export const servicePages: Record<string, LandingContent> = {
       { h2: "Strength and core rehabilitation", body: ["Building deep core strength, stability and control is central to women's health. Under physiotherapy guidance — including in our fully equipped Mount Hutton gym — we tailor an exercise-based program to your needs and progress it safely over time."] },
     ],
     faqs: [
-      { q: "Can I see a female physiotherapist?", a: "Yes. Our women's health physiotherapy is provided by Prakriti, a female physiotherapist — many patients appreciate this for sensitive concerns." },
+      { q: "Can I see a female physiotherapist?", a: "Yes. Our women's health physiotherapy is provided by Prakriti Shrestha, a female physiotherapist — many patients appreciate this for sensitive concerns." },
       { q: "Do I need a referral for women's health physiotherapy?", a: "No — you can book directly. A GP referral is only required for bulk-billed Care Plan treatment." },
       { q: "What can women's health physiotherapy help with?", a: "It supports pregnancy and postnatal recovery, pelvic health, core strength, post-operative rehabilitation and musculoskeletal concerns — with care tailored to you." },
     ],
@@ -103,7 +103,7 @@ export const servicePages: Record<string, LandingContent> = {
       { h2: "Understanding persistent pain", body: ["Chronic pain is pain that continues beyond normal healing time. It's influenced by many factors — not just tissue damage — which is why an active, evidence-based approach works far better than rest alone.", "We take the time to understand your individual pain experience and build a plan that gradually rebuilds your capacity and confidence to move."] },
       { h2: "How we help", body: ["Your program is tailored to you and progressed at a pace that feels safe."],
         list: ["Understanding your pain and its drivers","Graded movement to reduce fear","Hands-on treatment where helpful","Practical day-to-day strategies","Strength and conditioning","A graded return to meaningful activities"] },
-      { h2: "Expert, personalised care", body: ["With a Master's degree in Pain Management, Daniel brings advanced expertise to complex and persistent pain. Whether you're managing long-standing back pain, widespread pain, or pain that lingers after an injury, we help you take back control of your movement and life."] },
+      { h2: "Personalised pain care", body: ["Daniel Lee is an APA Titled Pain Physiotherapist with a Master of Science in Medicine (Pain Management), and works with people living with complex and persistent pain. Whether you're managing long-standing back pain, widespread pain, or pain that lingers after an injury, we work with you on a practical plan to move more and do more of what matters to you."] },
     ],
     faqs: [
       { q: "Can physiotherapy help chronic pain?", a: "Yes. An active, evidence-based physiotherapy approach is one of the most effective ways to manage chronic pain — restoring movement, reducing fear and improving function." },
@@ -151,7 +151,7 @@ export const servicePages: Record<string, LandingContent> = {
     eyebrow: "Musculoskeletal Physiotherapy Newcastle",
     h1: "Musculoskeletal Physiotherapy in Newcastle",
     serviceName: "Musculoskeletal Physiotherapy Newcastle",
-    intro: "Musculoskeletal physiotherapy in Newcastle and Lake Macquarie — expert assessment and hands-on treatment for back, neck, joint and muscle pain.",
+    intro: "Musculoskeletal physiotherapy in Newcastle and Lake Macquarie — thorough assessment and hands-on treatment for back, neck, joint and muscle pain.",
     lead: [
       "Musculoskeletal (MSK) physiotherapy is the core of what we do at Therapy 4 All — assessing and treating pain and injuries of the muscles, joints, ligaments and nerves.",
       "From a stiff neck or sore back to a persistent shoulder or knee problem, our physiotherapists identify what's really driving your pain and treat both the symptoms and the cause.",
@@ -160,8 +160,8 @@ export const servicePages: Record<string, LandingContent> = {
     sections: [
       { h2: "Conditions we treat", body: ["We assess and treat a broad range of musculoskeletal conditions across all ages."],
         list: ["Back and neck pain","Shoulder, elbow and wrist pain","Hip, knee and ankle pain","Arthritis and joint pain","Muscle strains and ligament sprains","Postural and work-related pain"] },
-      { h2: "Our hands-on approach", body: ["Every appointment begins with a thorough assessment. From there we use manual therapy, dry needling and joint mobilisation to ease pain and restore movement, alongside an individualised exercise program to build strength and prevent recurrence.", "We explain what's going on in plain language and give you practical strategies you can use between visits."] },
-      { h2: "Lasting results", body: ["Our focus is on outcomes that last. Rather than just settling the pain, we address the underlying cause and build your strength and movement quality — so you stay comfortable and active for the long term."] },
+      { h2: "Our hands-on approach", body: ["Every appointment begins with a thorough assessment. From there we use manual therapy, dry needling and joint mobilisation to ease pain and restore movement, alongside an individualised exercise program to build strength.", "We explain what's going on in plain language and give you practical strategies you can use between visits."] },
+      { h2: "Building strength for the long term", body: ["Alongside settling pain, we look at what may be contributing to it and build your strength and movement quality, with a home program you can keep doing between visits."] },
     ],
     faqs: [
       { q: "Do I need a referral for musculoskeletal physiotherapy?", a: "No — you can book a standard consultation directly. A GP referral is only needed for bulk-billed Care Plan treatment." },
@@ -182,7 +182,7 @@ export const servicePages: Record<string, LandingContent> = {
     serviceName: "Workplace Physiotherapy Newcastle",
     intro: "Workplace and return-to-work physiotherapy in Newcastle and the Hunter — assessment, treatment and reporting to help injured workers recover and return safely.",
     lead: [
-      "Therapy 4 All supports injured workers and employers across Newcastle and the Hunter with practical, results-driven workplace physiotherapy.",
+      "Therapy 4 All supports injured workers and employers across Newcastle and the Hunter with practical workplace physiotherapy.",
       "We help workers recover from injury, manage pain, and return to work safely and confidently — with clear assessment, treatment and communication throughout.",
       "We're experienced working alongside employers, GPs and case managers, and provide the reporting needed to support a smooth return-to-work process.",
     ],
@@ -219,7 +219,7 @@ export const servicePages: Record<string, LandingContent> = {
       { h2: "How we help older adults", body: ["Our aged care physiotherapy focuses on the things that keep you safe, capable and independent."],
         list: ["Improving mobility and walking","Balance training and falls prevention","Strength and conditioning","Recovery after illness or hospital","Managing arthritis and chronic conditions","Supporting confidence and independence"] },
       { h2: "Experienced, compassionate care", body: ["Keith brings extensive experience in aged care, complex rehabilitation and multidisciplinary care. His approach combines hands-on treatment with structured, practical rehabilitation designed around each person's needs and goals.", "We work closely with patients, families and care teams to improve mobility, reduce pain and support long-term function."] },
-      { h2: "Falls prevention and strength", body: ["Falls are a leading cause of lost independence for older adults, and most are preventable. Our balance and strength programs — supported by the gym at Mount Hutton — help you stay steady, confident and active."] },
+      { h2: "Falls prevention and strength", body: ["Falls are the leading cause of injury hospitalisation in Australia (AIHW), and the risk rises with age. Our balance and strength programs — supported by the gym at Mount Hutton — are designed to help you stay steady, confident and active."] },
     ],
     faqs: [
       { q: "Do you help older adults with balance and falls?", a: "Yes. Balance training and falls prevention are a key part of our aged care physiotherapy, using strength and balance exercises to keep you steady." },

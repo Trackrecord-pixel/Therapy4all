@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Icon from "./Icon";
 import { site } from "@/lib/site";
-export default function CTASection({ title = "Ready to move better and feel stronger?", text = "Book online or call our friendly team today. GP Care Plans are bulk billed." }: { title?: string; text?: string }) {
+export default function CTASection({ title = "Ready to move better and feel stronger?", text = "Book Mount Hutton online, or call your nearest clinic. GP care plans are bulk billed for eligible patients." }: { title?: string; text?: string }) {
   return (
     <section className="bg-white">
       <div className="container-px pb-20">
@@ -12,7 +12,7 @@ export default function CTASection({ title = "Ready to move better and feel stro
             <h2 className="mt-5 text-3xl text-white sm:text-4xl">{title}</h2>
             <p className="mt-4 text-lg text-brand-50">{text}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn bg-white text-brand-700 hover:bg-brand-50 w-full sm:w-auto">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+              <Link href="/book-online" className="btn bg-white text-brand-700 hover:bg-brand-50 w-full sm:w-auto">Book Now <Icon name="arrow" className="h-4 w-4" /></Link>
               <a href={site.phoneHref} className="btn border border-white/40 bg-transparent text-white hover:bg-white/10 w-full sm:w-auto"><Icon name="phone" className="h-4 w-4" /> {site.phone}</a>
             </div>
           </div>

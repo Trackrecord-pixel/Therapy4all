@@ -9,7 +9,7 @@ import { team } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Meet The Team",
-  description: "Meet the Therapy 4 All physiotherapy team — Keith Ho, Daniel Lee, Ekta Kakadiya and Prakriti. Experience across pain, sports, women's health, aged care and complex rehabilitation.",
+  description: "Meet the Therapy 4 All physiotherapy team — Keith Ho, Daniel Lee, Ekta Kakadiya and Prakriti Shrestha. Experience across pain, sports, women's health, aged care and complex rehabilitation.",
   alternates: { canonical: "/team" },
 };
 

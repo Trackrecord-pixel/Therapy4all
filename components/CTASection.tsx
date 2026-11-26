@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Icon from "./Icon";
 import { site } from "@/lib/site";
-export default function CTASection({ title = "Ready to move better and feel stronger?", text = "Book online or call our friendly team today. GP Care Plans are bulk billed." }: { title?: string; text?: string }) {
+export default function CTASection({ title = "Ready to move better and feel stronger?", text = "Book online or call our friendly team today. GP care plans are bulk billed for eligible patients." }: { title?: string; text?: string }) {
   return (
     <section className="bg-white">
       <div className="container-px pb-20">

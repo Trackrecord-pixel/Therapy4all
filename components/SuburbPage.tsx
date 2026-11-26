@@ -13,7 +13,7 @@ export default function SuburbPage({ sub }: { sub: Suburb }) {
   const others = locations.filter((l) => l.slug !== clinic.slug);
   const faqs = [
     { q: `Where is my nearest physiotherapy clinic to ${sub.name}?`, a: `Our closest clinic to ${sub.name} is Therapy 4 All ${clinic.name} — ${clinic.hostClinic.toLowerCase()}, at ${clinic.address}, ${sub.drive} away. Call ${clinic.phone} to book.` },
-    { q: `Do you bulk bill physiotherapy for ${sub.name} patients?`, a: `Yes. If your GP refers you under a Chronic Disease Management (CDM/EPC) plan, your physiotherapy is bulk billed with no out-of-pocket cost.` },
+    { q: `Do you bulk bill physiotherapy for ${sub.name} patients?`, a: `Yes, for eligible patients. If your GP refers you under a GP Chronic Condition Management Plan (GPCCMP), your Medicare-funded physiotherapy is bulk billed with no out-of-pocket cost.` },
     { q: `Do I need a referral to see a physio near ${sub.name}?`, a: `No — you can book a standard consultation directly. A GP referral is only needed for bulk-billed Care Plan treatment.` },
   ];
   const crumbs = [{ name: "Home", href: "/" }, { name: "Areas we serve", href: "/locations" }, { name: sub.name, href: `/${sub.slug}` }];

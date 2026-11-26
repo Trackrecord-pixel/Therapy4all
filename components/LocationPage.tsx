@@ -12,7 +12,7 @@ export default function LocationPage({ loc }: { loc: Location }) {
   const isHub = loc.slug === "physiotherapy-mount-hutton";
   const faqs = [
     { q: `Where is your ${loc.name} physiotherapy clinic?`, a: `Our ${loc.name} clinic is ${loc.hostClinic.toLowerCase()}, at ${loc.address}. Call ${loc.phone} to book.` },
-    { q: `Do you bulk bill at ${loc.name}?`, a: `Yes. If your GP refers you under a Chronic Disease Management (CDM/EPC) plan, we bulk bill your physiotherapy at ${loc.name} — no out-of-pocket cost.` },
+    { q: `Do you bulk bill at ${loc.name}?`, a: `Yes, for eligible patients. If your GP refers you under a GP Chronic Condition Management Plan (GPCCMP), we bulk bill your Medicare-funded physiotherapy at ${loc.name}.` },
     { q: `Do I need a referral for physiotherapy in ${loc.name}?`, a: `No — you can book a standard consultation directly. A GP referral is only needed for bulk-billed Care Plan treatment.` },
   ];
   return (

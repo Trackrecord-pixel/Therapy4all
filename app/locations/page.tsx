@@ -10,7 +10,7 @@ import { suburbs } from "@/lib/suburbs";
 
 export const metadata: Metadata = {
   title: "Our Clinics | Physiotherapy Locations",
-  description: "Therapy 4 All physiotherapy clinics at Mount Hutton (main hub with gym), Warners Bay, Wallsend and Rutherford — inside trusted medical practices across Newcastle, Lake Macquarie and Maitland.",
+  description: "Therapy 4 All physiotherapy clinics at Mount Hutton (main hub with gym), Warners Bay, Wallsend and Rutherford — across Newcastle, Lake Macquarie and Maitland.",
   alternates: { canonical: "/locations" },
 };
 
@@ -18,7 +18,7 @@ export default function LocationsPage() {
   return (
     <>
       <PageHero eyebrow="Our Clinics" title="Physiotherapy clinics across the Hunter"
-        intro="Four clinics inside trusted medical practices. Mount Hutton is our main hub, with a fully equipped rehabilitation gym."
+        intro="Four clinics across the Hunter. Mount Hutton is our main clinic, with a fully equipped rehabilitation gym. Referrals welcome from any GP."
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Locations", href: "/locations" }]} />
       <section className="section-py bg-white">
         <div className="container-px grid gap-6 md:grid-cols-2">

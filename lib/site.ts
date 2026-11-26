@@ -49,7 +49,7 @@ export const services: Service[] = [
   {
     slug: "gp-care-plan",
     title: "GP Care Plan (Bulk Billing)",
-    short: "Chronic Disease Management (CDM/EPC) physiotherapy referred by your GP — bulk billed, with no out-of-pocket cost.",
+    short: "Physiotherapy referred by your GP under a GP Chronic Condition Management Plan (GPCCMP) — bulk billed for eligible patients.",
     icon: "doc",
     points: [
       "Relevant medical history review",
@@ -69,7 +69,7 @@ export const services: Service[] = [
   {
     slug: "sports-injury",
     title: "Sports Injury Physiotherapy",
-    short: "Expert care for sports and overuse injuries — manual therapy and rehabilitation to restore movement and prevent recurrence.",
+    short: "Care for sports and overuse injuries — manual therapy and rehabilitation to help you return to training and play.",
     icon: "activity",
   },
   {
@@ -107,9 +107,9 @@ export const services: Service[] = [
 export const whyChoose = [
   { icon: "check", title: "Accessible & personalised", text: "Care designed around your goals, lifestyle and daily life — not a one-size-fits-all program." },
   { icon: "joint", title: "Hands-on + real-world rehab", text: "We combine manual therapy with structured, practical rehabilitation that lasts beyond the treatment room." },
-  { icon: "doc", title: "GP Care Plans bulk billed", text: "Referred by your GP under a CDM plan? We bulk bill, so there's no out-of-pocket cost." },
+  { icon: "doc", title: "GP Care Plans bulk billed", text: "Referred by your GP under a GP care plan (GPCCMP)? Eligible patients are bulk billed." },
   { icon: "pin", title: "4 clinics near you", text: "Conveniently located inside trusted medical practices across Newcastle, Lake Macquarie and Maitland." },
-  { icon: "users", title: "Experienced team", text: "Physiotherapists with expertise across pain, sports, women's health, aged care and complex rehab." },
+  { icon: "users", title: "Experienced team", text: "Physiotherapists with experience across pain, sports, women's health, aged care and complex rehab." },
   { icon: "pulse", title: "Long-term outcomes", text: "We focus on how you move, function and live — helping you build strength and confidence over time." },
 ];
 
@@ -120,7 +120,7 @@ export const team: TeamMember[] = [
   {
     slug: "keith-ho", name: "Keith Ho", role: "Physiotherapist · Director", photo: "/team/keith-ho.jpg",
     bio: [
-      "Keith is a highly experienced physiotherapist with a strong background in aged care, complex rehabilitation and multidisciplinary team leadership. He has extensive experience managing chronic conditions, supporting functional independence, and delivering care across community and residential settings.",
+      "Keith is an experienced physiotherapist with a strong background in aged care, complex rehabilitation and multidisciplinary team leadership. He has extensive experience managing chronic conditions, supporting functional independence, and delivering care across community and residential settings.",
       "His approach combines hands-on treatment with structured rehabilitation programs tailored to each individual's needs. With a strong focus on quality care and practical outcomes, Keith works closely with patients, families and care teams to improve mobility, reduce pain and support long-term function.",
       "Alongside his clinical work, Keith has held senior leadership roles — overseeing large allied health teams, mentoring clinicians and implementing systems to ensure consistent, high-quality care.",
     ],
@@ -129,7 +129,7 @@ export const team: TeamMember[] = [
   {
     slug: "daniel-lee", name: "Daniel Lee", role: "Physiotherapist · Director", photo: "/team/daniel-lee.jpg",
     bio: [
-      "Daniel has a Master's degree in Pain Management from the University of Sydney and a strong focus on pain management and functional rehabilitation.",
+      "Daniel is an APA Titled Pain Physiotherapist with a Master of Science in Medicine (Pain Management) from the University of Sydney, and a strong focus on pain management and functional rehabilitation.",
       "His approach centres on understanding each patient's experience and goals, combining hands-on treatment with simple, practical strategies to help patients move with confidence and return to meaningful daily activities.",
       "He focuses on long-term outcomes, reducing fear around movement, and building independence through tailored rehabilitation.",
     ],
@@ -138,8 +138,8 @@ export const team: TeamMember[] = [
   {
     slug: "ekta-kakadiya", name: "Ekta Kakadiya", role: "Senior Physiotherapist", photo: "/team/ekta-kakadiya.jpg",
     bio: [
-      "Ekta specialises in sports and musculoskeletal physiotherapy, with a particular focus on shoulder and neck conditions.",
-      "She takes a hands-on, results-driven approach, combining manual therapy with targeted exercise programs to manage pain, restore movement and prevent recurrence. Ekta is known for her precise clinical reasoning and ability to tailor treatment to each patient's needs and lifestyle.",
+      "Ekta has a strong interest in sports and musculoskeletal physiotherapy, particularly shoulder and neck conditions.",
+      "She takes a hands-on approach, combining manual therapy with targeted exercise programs to help manage pain and restore movement. Ekta is known for her precise clinical reasoning and ability to tailor treatment to each patient's needs and lifestyle.",
     ],
     interests: ["Sports & MSK", "Shoulder & Neck", "Manual Therapy"],
   },
@@ -186,12 +186,12 @@ export const locations: Location[] = [
 
 export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
-  { q: "Do you bulk bill?", a: "Yes. If your GP refers you under a Chronic Disease Management (CDM/EPC) plan, we bulk bill your physiotherapy so there is no out-of-pocket cost. Ask your GP whether a Care Plan is right for you." },
-  { q: "Do I need a referral to see a physiotherapist?", a: "No — you can book directly for a standard consultation without a referral. A GP referral is only needed if you want to be treated under a bulk-billed GP Care Plan (CDM)." },
+  { q: "Do you bulk bill?", a: "Yes, for eligible patients. If your GP refers you under a GP Chronic Condition Management Plan (GPCCMP), we bulk bill your Medicare-funded physiotherapy at all four clinics. Older GP Management Plans can be used until 30 June 2027. Ask your GP whether a care plan is right for you." },
+  { q: "Do I need a referral to see a physiotherapist?", a: "No — you can book directly for a standard consultation without a referral. A GP referral is only needed if you want to be treated under a bulk-billed GP care plan (GPCCMP)." },
   { q: "How much does a standard consultation cost?", a: "A standard 30-minute consultation is $90. This includes assessment, hands-on treatment, and an individualised exercise and progression plan." },
   { q: "What should I bring to my first appointment?", a: "Please bring any relevant scans, imaging or reports, a list of medications, and your GP referral or Care Plan if you have one. Wear comfortable clothing you can move in." },
   { q: "Where are your clinics?", a: "We have four clinics inside trusted medical practices — Mount Hutton (our main hub, with a fully equipped rehabilitation gym), Warners Bay, Wallsend and Rutherford — across Newcastle, Lake Macquarie and Maitland." },
-  { q: "Do you treat sports injuries?", a: "Yes. Our team includes physiotherapists who specialise in sports and musculoskeletal injuries, combining manual therapy with targeted rehabilitation to restore movement and prevent recurrence." },
+  { q: "Do you treat sports injuries?", a: "Yes. Our team includes physiotherapists with a strong interest in sports and musculoskeletal injuries, combining manual therapy with targeted rehabilitation to help you get back to your sport." },
   { q: "Do you offer workplace and return-to-work rehabilitation?", a: "Yes. We support injured workers and employers with assessment, treatment, return-to-work planning and clear reporting." },
   { q: "Do you offer women's health physiotherapy?", a: "Yes. We offer women's health physiotherapy with a female physiotherapist, providing evidence-based, individualised care in a supportive and respectful setting." },
 ];

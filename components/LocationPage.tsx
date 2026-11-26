@@ -57,7 +57,11 @@ export default function LocationPage({ loc }: { loc: Location }) {
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="phone" className="h-4 w-4 text-brand-600" /> <a href={loc.phoneHref} className="font-semibold hover:text-brand-700">{loc.phone}</a></p>
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="clock" className="h-4 w-4 text-brand-600" /> {site.hours}</p>
                 <div className="mt-5 flex flex-col gap-3">
-                  <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  {isHub ? (
+                    <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  ) : (
+                    <a href={loc.phoneHref} className="btn-primary w-full"><Icon name="phone" className="h-4 w-4" /> Call {loc.phone} to book</a>
+                  )}
                   <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Therapy 4 All " + loc.address)}`} target="_blank" rel="noopener noreferrer" className="btn-secondary w-full">Get directions</a>
                 </div>
               </div>

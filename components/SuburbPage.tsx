@@ -54,7 +54,11 @@ export default function SuburbPage({ sub }: { sub: Suburb }) {
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="phone" className="h-4 w-4 text-brand-600" /> <a href={clinic.phoneHref} className="font-semibold hover:text-brand-700">{clinic.phone}</a></p>
                 <p className="mt-2 inline-flex items-center gap-2 text-sm text-ink-700"><Icon name="clock" className="h-4 w-4 text-brand-600" /> {site.hours}</p>
                 <div className="mt-5 flex flex-col gap-3">
-                  <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  {clinic.slug === "physiotherapy-mount-hutton" ? (
+                    <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">Book Online <Icon name="arrow" className="h-4 w-4" /></Link>
+                  ) : (
+                    <a href={clinic.phoneHref} className="btn-primary w-full"><Icon name="phone" className="h-4 w-4" /> Call {clinic.phone} to book</a>
+                  )}
                   <Link href={`/${clinic.slug}`} className="btn-secondary w-full">View {clinic.name} clinic</Link>
                 </div>
               </div>

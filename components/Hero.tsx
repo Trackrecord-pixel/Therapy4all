@@ -26,16 +26,18 @@ export default function Hero() {
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <Link href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary sm:w-auto">
-            Book Online <Icon name="arrow" className="h-5 w-5" />
+            Book Mount Hutton online <Icon name="arrow" className="h-5 w-5" />
           </Link>
-          <a href={site.phoneHref} className="btn-secondary sm:w-auto"><Icon name="phone" className="h-5 w-5" /> {site.phone}</a>
+          <a href="#clinics" className="btn-secondary sm:w-auto"><Icon name="pin" className="h-5 w-5" /> Find a clinic &amp; call</a>
         </div>
-        <p className="mt-4 text-sm text-[#c9d6d1]">Book online, call, or just walk in — whichever suits you.</p>
+        <p className="mt-4 max-w-2xl text-sm text-[#c9d6d1]">
+          Online booking and walk-ins at Mount Hutton. For Warners Bay, Wallsend and Rutherford, call the clinic to book.
+        </p>
 
         <ul className="mt-10 flex flex-wrap gap-2.5">
           <li className="chip"><Icon name="doc" className="h-4 w-4 text-[#4fd8c0]" /> Bulk billing for eligible GP care plans</li>
           <li className="chip"><Icon name="strength" className="h-4 w-4 text-[#4fd8c0]" /> Rehab gym at Mount Hutton</li>
-          <li className="chip"><Icon name="clock" className="h-4 w-4 text-[#4fd8c0]" /> Walk-ins welcome</li>
+          <li className="chip"><Icon name="clock" className="h-4 w-4 text-[#4fd8c0]" /> Walk-ins welcome at Mount Hutton</li>
           <li className="chip"><Icon name="shield" className="h-4 w-4 text-[#4fd8c0]" /> NDIS · WorkCover · DVA</li>
         </ul>
       </div>
